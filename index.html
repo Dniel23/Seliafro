@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>I Seminário de Literaturas Africanas e Afro-brasileira: Ensino e...</title>
+    <meta name="description" content="Participe do I Seminário de Literaturas Africanas e Afro-brasileira: Ensino, Pesquisa e Cidadania. De 03 a 05 de novembro na UEG - Campus Pires do Rio.">
+    <meta property="og:title" content="I Seminário de Literaturas Africanas e Afro-brasileira: Ensino e...">
+    <meta property="og:description" content="Evento presencial e híbrido com conferências, minicursos e mesas-redondas sobre o ensino e pesquisa em literaturas africanas e afro-brasileira.">
+    <meta property="og:image" content="assets/postagem_1.jpg">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@uegoficial">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --background: hsl(220, 15%, 96%);
+            --foreground: hsl(220, 10%, 20%);
+            --card: hsl(0, 0%, 100%);
+            --primary: hsl(210, 40%, 25%);
+            --primary-foreground: hsl(210, 20%, 98%);
+            --secondary: hsl(210, 30%, 93%);
+            --muted-foreground: hsl(210, 10%, 45%);
+            --accent: hsl(28, 80%, 55%);
+            --accent-foreground: hsl(0, 0%, 100%);
+            --border: hsl(210, 20%, 88%);
+            --radius: 0.75rem;
+            --font-sans: 'Poppins', sans-serif;
+            --shadow-sm: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -2px rgba(0,0,0,0.05);
+            --shadow-md: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--background);
+            color: var(--foreground);
+            line-height: 1.7;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section {
+            padding: 4rem 0;
+        }
+
+        h1, h2, h3 {
+            line-height: 1.2;
+            color: var(--primary);
+            font-weight: 700;
+        }
+        
+        /* Animação de entrada */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .animate-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .main-header {
+            background-color: hsla(0, 0%, 100%, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: background-color 0.3s;
+        }
+
+        .header-content { display: flex; justify-content: space-between; align-items: center; }
+        .logo-container { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+        .logo-container img { height: 40px; }
+        .event-title-header h1 { font-size: 0.9rem; font-weight: 600; color: var(--primary); line-height: 1.3; }
+        .event-title-header p { font-size: 0.75rem; color: var(--muted-foreground); }
+        
+        .main-nav {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: var(--background);
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 0;
+        }
+        .main-nav.active { display: flex; }
+        .main-nav ul { list-style: none; width: 100%; }
+        .main-nav a { display: block; padding: 0.75rem 5%; text-decoration: none; color: var(--foreground); font-weight: 500; transition: background-color 0.2s, color 0.2s; }
+        .main-nav a:hover { background-color: var(--secondary); color: var(--accent); }
+        .main-nav .btn { margin: 1rem 5% 0; text-align: center; }
+
+        .btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.75rem 1.5rem; border-radius: var(--radius); text-decoration: none; font-weight: 600; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); cursor: pointer; border: 2px solid transparent; }
+        .btn-primary { background-color: var(--accent); color: var(--accent-foreground); }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); opacity: 0.9; }
+        .btn-outline { border-color: var(--accent); color: var(--accent); background: transparent; }
+        .btn-outline:hover { background: var(--accent); color: var(--accent-foreground); transform: translateY(-2px); }
+        
+        .inscription-btn-header { display: none; }
+        .hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; border: none; background: none; padding: 5px; z-index: 1001; }
+        .hamburger span { display: block; width: 25px; height: 3px; background-color: var(--primary); transition: all 0.3s ease-in-out; border-radius: 3px; }
+        .hamburger.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+        
+        @media (min-width: 820px) {
+            .hamburger { display: none; }
+            .inscription-btn-header { display: inline-flex; }
+            .main-nav { display: flex; flex-direction: row; position: static; width: auto; border: none; padding: 0; align-items: center; background: none; }
+            .main-nav ul { display: flex; width: auto; }
+            .main-nav a { padding: 0.5rem 1rem; border-radius: var(--radius); }
+            .main-nav a:hover { background-color: var(--secondary); color: var(--accent); }
+            .main-nav .btn { display: none; }
+        }
+
+        .hero { position: relative; text-align: center; color: white; padding: 6rem 0; display: flex; align-items: center; justify-content: center; min-height: 80vh; overflow: hidden; }
+        .hero::before { 
+            content: ''; 
+            position: absolute; 
+            inset: 0; 
+            background-image: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.9)), url('https://cdn.discordapp.com/attachments/1201642042275680359/1414476689261461578/fundo.svg?ex=68bfb592&is=68be6412&hm=f8e90ec942f08a57cfbcb7c22d4c4167d3986263411a74dc09ccd2f967f3f278&'); 
+            background-size: cover; 
+            background-position: center; 
+            z-index: -1; 
+        }
+        .hero-content { max-width: 800px; }
+        .hero h1 { font-size: 2.5rem; color: white; margin-bottom: 1rem; line-height: 1.3; }
+        .hero p { font-size: 1.15rem; margin-bottom: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto; color: rgba(255,255,255,0.85); }
+        .countdown { display: flex; gap: 1rem; justify-content: center; margin-top: 2rem; }
+        .countdown > div { background-color: rgba(0,0,0,0.2); padding: 1rem; border-radius: var(--radius); min-width: 90px; }
+        .countdown-number { font-size: 2.5rem; font-weight: 700; line-height: 1; color: var(--accent); }
+        .countdown-label { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,0.7); }
+
+        @media (min-width: 768px) {
+            .hero h1 { font-size: 3.5rem; }
+            .hero p { font-size: 1.25rem; }
+        }
+
+        .section-title { text-align: center; margin-bottom: 3rem; font-size: 2.5rem; }
+        .card { background-color: var(--card); border-radius: var(--radius); box-shadow: var(--shadow-sm); transition: transform 0.3s, box-shadow 0.3s; }
+        .card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
+        
+        .schedule { background-color: var(--secondary); }
+        .schedule-filters { display: flex; justify-content: center; gap: 0.5rem; margin-bottom: 2rem; flex-wrap: wrap; }
+        .filter-btn { background-color: white; border: 1px solid var(--border); color: var(--muted-foreground); }
+        .filter-btn.active { background-color: var(--primary); color: var(--primary-foreground); border-color: var(--primary); transform: translateY(-2px); }
+        
+        .schedule-items-container { position: relative; }
+        .schedule-item { background-color: white; padding: 1.5rem; border-radius: var(--radius); margin-bottom: 1rem; border-left: 5px solid var(--accent); transition: opacity 0.4s ease, transform 0.4s ease, max-height 0.5s ease, padding 0.5s ease; overflow: hidden; }
+        .schedule-item.hidden { opacity: 0; transform: scale(0.95); max-height: 0; padding-top: 0; padding-bottom: 0; margin-bottom: 0; border: 0; }
+        .schedule-item header { display: flex; flex-direction: column; gap: 0.25rem; margin-bottom: 0.75rem; }
+        .schedule-item h3 { font-size: 1.2rem; color: var(--primary); }
+        .schedule-time { font-weight: 600; color: var(--accent); }
+        .schedule-item ul { margin-left: 1.5rem; }
+        @media (min-width: 768px) {
+            .schedule-item header { flex-direction: row; justify-content: space-between; align-items: center; }
+        }
+
+        .speakers-grid { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+        .speaker-card { text-align: center; overflow: hidden; }
+        .speaker-card img { width: 100%; height: 280px; object-fit: cover; object-position: top; }
+        .speaker-info { padding: 1.5rem; }
+        .speaker-info h3 { font-size: 1.25rem; }
+        .speaker-info .affiliation { font-size: 0.9rem; font-style: italic; color: var(--muted-foreground); margin-bottom: 1rem; }
+        .speaker-info .talk-title { font-size: 1rem; font-weight: 500; min-height: 3em; margin-bottom: 1.5rem; }
+
+        .minicursos { background-color: var(--secondary); }
+        .minicurso-card { padding: 1.5rem; margin-bottom: 1rem; }
+        .minicurso-card h3 { color: var(--primary); margin-bottom: 0.5rem; }
+        
+        .location-grid { display: grid; gap: 2rem; align-items: center; }
+        .location-grid iframe { width: 100%; height: 300px; border: 0; border-radius: var(--radius); }
+        @media (min-width: 768px) {
+            .location-grid { grid-template-columns: 1fr 1fr; }
+            .location-grid iframe { height: 400px; }
+        }
+
+        .main-footer { background-color: var(--primary); color: var(--primary-foreground); padding: 3rem 0; text-align: center; }
+        .support-logos { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 2rem; margin-bottom: 2rem; }
+        .support-logos img { max-height: 50px; filter: brightness(0) invert(1); opacity: 0.8; transition: opacity 0.3s; }
+        .support-logos img:hover { opacity: 1; }
+        .footer-bottom { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.2); font-size: 0.9rem; opacity: 0.8; }
+
+        .modal { display: none; position: fixed; z-index: 1001; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(15, 23, 42, 0.8); backdrop-filter: blur(5px); animation: fadeIn 0.3s ease; }
+        .modal-content { background-color: var(--background); margin: 10vh auto; padding: 2rem; border-radius: var(--radius); max-width: 500px; width: 90%; position: relative; animation: scaleIn 0.3s ease; box-shadow: var(--shadow-md); }
+        .close-btn { color: #aaa; position: absolute; top: 0.5rem; right: 1rem; font-size: 2rem; font-weight: bold; cursor: pointer; transition: color 0.2s; }
+        .close-btn:hover { color: var(--foreground); }
+        #bio-content h3 { margin-bottom: 1rem; }
+
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes scaleIn { from { transform: scale(0.9); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-content">
+            <a href="#" class="logo-container">
+                <img src="https://cdn.discordapp.com/attachments/1201642042275680359/1414477076202786846/logoueg.png?ex=68bfb5ee&is=68be646e&hm=68fc0810b6c14d26afb2216ffba61e08d5512320b33819350f97c62cb9aa6b7e&" alt="Logo UEG">
+                <div class="event-title-header">
+                    <h1>I Seminário de Literaturas...</h1>
+                    <p>03.11 a 05.11 | UEG Pires do Rio</p>
+                </div>
+            </a>
+            <nav class="main-nav" id="main-nav">
+                <ul>
+                    <li><a href="#cronograma">Programação</a></li>
+                    <li><a href="#palestrantes">Palestrantes</a></li>
+                    <li><a href="#minicursos">Minicursos</a></li>
+                    <li><a href="#local">Local</a></li>
+                </ul>
+                <a href="https://www.even3.com.br/" target="_blank" class="btn btn-primary">Inscreva-se</a>
+            </nav>
+            <a href="https://www.even3.com.br/" target="_blank" class="btn btn-primary inscription-btn-header">Inscreva-se</a>
+            <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="hero-content animate-on-scroll">
+                <h1>I Seminário de Literaturas Africanas e Afro-brasileira: Ensino e Diversidade</h1>
+                <p>Um espaço de diálogo e reflexão sobre as narrativas que moldam e revelam as conexões culturais entre África e Brasil.</p>
+                <div id="countdown" class="countdown"></div>
+            </div>
+        </section>
+
+        <section id="cronograma" class="schedule">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Programação Provisória</h2>
+                <div class="schedule-filters animate-on-scroll">
+                    <button class="filter-btn btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn btn" data-filter="dia-03">03.11</button>
+                    <button class="filter-btn btn" data-filter="dia-04">04.11</button>
+                    <button class="filter-btn btn" data-filter="dia-05">05.11</button>
+                </div>
+                
+                <div class="schedule-items-container animate-on-scroll">
+                    <article class="schedule-item" data-day="dia-03" data-type="tipo-minicurso">
+                        <header><h3>Minicurso: Da margem ao centro...</h3> <span class="schedule-time">14:00 – 17:00</span></header>
+                        <p><strong>Com:</strong> Karyelly Guimarães Moreira & Carlos</p>
+                    </article>
+                    <article class="schedule-item" data-day="dia-03" data-type="tipo-conferencia">
+                        <header><h3>Conferência de Abertura</h3> <span class="schedule-time">21:30 – 22:20</span></header>
+                        <p>"África e Brasil: linguagens em movimento"</p>
+                        <p><strong>Com:</strong> Profa. Dra. Rita Chaves (USP)</p>
+                    </article>
+                    
+                    <article class="schedule-item" data-day="dia-04" data-type="tipo-minicurso">
+                        <header><h3>Minicurso: Mulher, cultura e literatura...</h3> <span class="schedule-time">09:00 – 12:00</span></header>
+                        <p><strong>Com:</strong> Profa. Dra. Sônia Santos</p>
+                    </article>
+                    <article class="schedule-item" data-day="dia-04" data-type="tipo-mesa-redonda">
+                        <header><h3>Mesa-redonda: Narrativas da Diáspora</h3><span class="schedule-time">14:00 – 16:00</span></header>
+                        <ul>
+                            <li>Prof. Dr. José Humberto dos Anjos</li>
+                            <li>Profa. Dra. Norma Lima</li>
+                            <li>Prof. Dr. Dirlenvalder do Nascimento</li>
+                        </ul>
+                    </article>
+                    <article class="schedule-item" data-day="dia-04" data-type="tipo-conferencia">
+                        <header><h3>Conferência: "O tema-mundo colonial"</h3><span class="schedule-time">21:30 – 22:20</span></header>
+                        <p><strong>Com:</strong> Prof. Dr. Edvaldo Bergamo (UnB)</p>
+                    </article>
+
+                    <article class="schedule-item" data-day="dia-05" data-type="tipo-mesa-redonda">
+                        <header><h3>Mesa-redonda: Ensino de Literaturas Africanas</h3><span class="schedule-time">16:00 – 18:00</span></header>
+                        <ul>
+                            <li>Profa. Dra. Lilian W. P. de Souza</li>
+                            <li>Prof. Dr. Samuel de Jesus</li>
+                        </ul>
+                    </article>
+                    <article class="schedule-item" data-day="dia-05" data-type="tipo-conferencia">
+                        <header><h3>Conferência de Encerramento</h3> <span class="schedule-time">21:20 – 22:00</span></header>
+                        <p><strong>Com:</strong> Profa. Dra. Maria Nazareth Soares Fonseca (UFMG)</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="palestrantes">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Palestrantes</h2>
+                <div class="speakers-grid">
+                    <article class="speaker-card card animate-on-scroll">
+                        <img src="https://cdn.discordapp.com/attachments/1201642042275680359/1414477349315149894/Rita.png?ex=68bfb62f&is=68be64af&hm=d1364223878be586a86a133a3bd361d6a762883f6dd8cd601fea45cc21f4cc97&" alt="Foto da Profa. Dra. Rita Chaves" loading="lazy">
+                        <div class="speaker-info">
+                            <h3>Profa. Dra. Rita Chaves</h3>
+                            <p class="affiliation">USP</p>
+                            <p class="talk-title">"África e Brasil: linguagens em movimento"</p>
+                            <button class="btn btn-outline bio-btn" data-speaker="rita-chaves">Ver Bio</button>
+                        </div>
+                    </article>
+                    <article class="speaker-card card animate-on-scroll" style="transition-delay: 100ms;">
+                        <img src="https://cdn.discordapp.com/attachments/1201642042275680359/1414476543358668861/Edvaldo.png?ex=68bfb56f&is=68be63ef&hm=3a0612ccc314d3786f2862885af723fc16a9815d3365b0560794ea3f816e80ca&" alt="Foto do Prof. Dr. Edvaldo Bergamo" loading="lazy">
+                        <div class="speaker-info">
+                            <h3>Prof. Dr. Edvaldo Bergamo</h3>
+                            <p class="affiliation">UnB</p>
+                            <p class="talk-title">"O tema-mundo colonial e a literatura"</p>
+                            <button class="btn btn-outline bio-btn" data-speaker="edvaldo-bergamo">Ver Bio</button>
+                        </div>
+                    </article>
+                    <article class="speaker-card card animate-on-scroll" style="transition-delay: 200ms;">
+                        <img src="https://cdn.discordapp.com/attachments/1201642042275680359/1414477174366408824/Nazareth.png?ex=68bfb606&is=68be6486&hm=4c4b6b458449af6f78628d5bc72df424edb23c0605a91016a5cd06bd10800f54&" alt="Foto da Profa. Dra. Maria Nazareth Soares Fonseca" loading="lazy">
+                        <div class="speaker-info">
+                            <h3>Profa. Dra. Maria Nazareth S. Fonseca</h3>
+                            <p class="affiliation">UFMG</p>
+                            <p class="talk-title">Conferência de Encerramento</p>
+                            <button class="btn btn-outline bio-btn" data-speaker="maria-nazareth">Ver Bio</button>
+                        </div>
+                    </article>
+                    <article class="speaker-card card animate-on-scroll" style="transition-delay: 300ms;">
+                        <img src="https://cdn.discordapp.com/attachments/1201642042275680359/1414477520652472416/Sonia.jpg?ex=68bfb658&is=68be64d8&hm=5e70d2f9597ee9c9b7af2cc3477fea6d7339f0c7856d6c11bb94d83272b634c4&" alt="Foto da Profa. Dra. Sônia Santos" loading="lazy">
+                        <div class="speaker-info">
+                            <h3>Profa. Dra. Sônia Santos</h3>
+                            <p class="affiliation">Ministrante de Minicurso</p>
+                            <p class="talk-title">Minicurso: "Mulher, cultura e literatura..."</p>
+                            <button class="btn btn-outline bio-btn" data-speaker="sonia-santos">Ver Bio</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <section id="minicursos" class="minicursos">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Minicursos</h2>
+                <div class="card minicurso-card animate-on-scroll">
+                    <h3>Da margem ao centro: a literatura como ferramenta de empoderamento e cidadania</h3>
+                    <p><strong>Com:</strong> Karyelly Guimarães Moreira & Carlos</p>
+                    <p><strong>Data:</strong> 03.11 | <strong>Horário:</strong> 14:00–17:00 | <strong>Vagas:</strong> 30</p>
+                </div>
+                <div class="card minicurso-card animate-on-scroll" style="transition-delay: 100ms;">
+                    <h3>Mulher, cultura e literatura: uma análise da produção feminina em África e no Brasil</h3>
+                    <p><strong>Com:</strong> Profa. Dra. Sônia Santos</p>
+                    <p><strong>Data:</strong> 04.11 | <strong>Horário:</strong> 09:00–12:00 | <strong>Vagas:</strong> 30</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="local">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Local do Evento</h2>
+                <div class="location-grid">
+                    <div class="animate-on-scroll">
+                        <h3>UEG — Campus Pires do Rio</h3>
+                        <p><strong>Modalidade:</strong> Presencial / Híbrido</p>
+                        <p>Av. Coronel Lino Teixeira de Sampaio, 241 - Bairro São Miguel, Pires do Rio - GO, 75200-000</p>
+                        <p>O evento ocorrerá no auditório principal da Universidade Estadual de Goiás, com estrutura para receber participantes presenciais e transmitir as principais conferências online.</p>
+                    </div>
+                    <div class="animate-on-scroll" style="transition-delay: 100ms;">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3835.4985289945533!2d-48.28825868514264!3d-17.301323988107957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94a1005a89e9f29d%3A0x6097d620573e3489!2sUniversidade%20Estadual%20de%20Goi%C3%A1s%20-%20Campus%20Pires%20do%20Rio!5e0!3m2!1spt-BR!2sbr!4v1662589134361!5m2!1spt-BR!2sbr"
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="support-logos">
+                <img src="https://cdn.discordapp.com/attachments/1201642042275680359/1414477268796969010/Neabi.png?ex=68bfb61c&is=68be649c&hm=b827f8c648c3a369363a70cb7d100144c8ec0765b6a406cc8ee9cdd252bcc7a6&" alt="NEABI - Núcleo de estudos Afro-brasileiros e Indígenas">
+                <img src="https://cdn.discordapp.com/attachments/1201642042275680359/1414476397606604810/afrolic.png?ex=68bfb54c&is=68be63cc&hm=b4461f97b887a2fd66cde8e4313b5b2531c35cbb87d981ad79ecfe4055b5b17e&" alt="Afrolic">
+                <img src="https://cdn.discordapp.com/attachments/1201642042275680359/1414477445087629353/Seliafro.png?ex=68bfb646&is=68be64c6&hm=dbaa016a088c0da4553eda15e118798ea5ff8e5a9240606de369b281d6ea245a&" alt="Logo de Apoio 3">
+            </div>
+            <p>I Seminário de Literaturas Africanas e Afro-brasileira</p>
+            <p>Contato: evento.seliafro@ueg.br</p>
+            <div class="footer-bottom">
+                <p>© 2025 UEG - Campus Pires do Rio. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <div id="bio-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-bio-btn">×</span>
+            <div id="bio-content"></div>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const hamburger = document.getElementById('hamburger');
+            const nav = document.getElementById('main-nav');
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                nav.classList.toggle('active');
+            });
+            
+            const bioModal = document.getElementById('bio-modal');
+            const bioBtns = document.querySelectorAll('.bio-btn');
+            const closeBioBtn = document.getElementById('close-bio-btn');
+            
+            const bios = {
+                'rita-chaves': { name: 'Profa. Dra. Rita Chaves', bio: 'Professora titular de Literaturas Africanas de Língua Portuguesa na Universidade de São Paulo (USP). É uma das maiores especialistas do Brasil na área, com vasta publicação de livros e artigos sobre autores como Mia Couto e Paulina Chiziane.' },
+                'edvaldo-bergamo': { name: 'Prof. Dr. Edvaldo Bergamo', bio: 'Professor da Universidade de Brasília (UnB), com pesquisas voltadas para a teoria literária, literatura comparada e estudos pós-coloniais. Seus trabalhos abordam a representação do colonialismo e suas heranças na literatura.' },
+                'maria-nazareth': { name: 'Profa. Dra. Maria Nazareth Soares Fonseca', bio: 'Professora emérita da Universidade Federal de Minas Gerais (UFMG), pesquisadora do CNPq e referência nos estudos da literatura afro-brasileira. Sua obra é fundamental para a compreensão das poéticas e políticas de autoria negra no Brasil.' },
+                'sonia-santos': { name: 'Profa. Dra. Sônia Santos', bio: 'Docente e pesquisadora com foco em estudos de gênero, cultura e literatura. Analisa a produção literária de mulheres em contextos africanos e da diáspora, investigando temas como identidade, memória e resistência.' }
+            };
+
+            bioBtns.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const speakerKey = e.currentTarget.dataset.speaker;
+                    const speakerData = bios[speakerKey];
+                    if (speakerData) {
+                        document.getElementById('bio-content').innerHTML = `<h3>${speakerData.name}</h3><p>${speakerData.bio}</p>`;
+                        bioModal.style.display = 'block';
+                    }
+                });
+            });
+
+            const closeModal = () => bioModal.style.display = 'none';
+            closeBioBtn.addEventListener('click', closeModal);
+            window.addEventListener('click', (event) => {
+                if (event.target == bioModal) closeModal();
+            });
+            window.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape') closeModal();
+            });
+
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const scheduleItems = document.querySelectorAll('.schedule-item');
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    e.currentTarget.classList.add('active');
+                    const filter = e.currentTarget.dataset.filter;
+                    
+                    scheduleItems.forEach(item => {
+                        const dayMatch = filter === 'all' || item.dataset.day === filter;
+                        if (dayMatch) {
+                            item.classList.remove('hidden');
+                        } else {
+                            item.classList.add('hidden');
+                        }
+                    });
+                });
+            });
+
+            const countdownElement = document.getElementById('countdown');
+            const eventDate = new Date('November 3, 2025 09:00:00').getTime();
+            const updateCountdown = () => {
+                const now = new Date().getTime();
+                const distance = eventDate - now;
+
+                if (distance < 0) {
+                    clearInterval(countdownInterval);
+                    countdownElement.innerHTML = "O evento já começou!";
+                    return;
+                }
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+                countdownElement.innerHTML = `
+                    <div><div class="countdown-number">${String(days).padStart(2, '0')}</div><div class="countdown-label">Dias</div></div>
+                    <div><div class="countdown-number">${String(hours).padStart(2, '0')}</div><div class="countdown-label">Horas</div></div>
+                    <div><div class="countdown-number">${String(minutes).padStart(2, '0')}</div><div class="countdown-label">Minutos</div></div>
+                    <div><div class="countdown-number">${String(seconds).padStart(2, '0')}</div><div class="countdown-label">Segundos</div></div>
+                `;
+            };
+            const countdownInterval = setInterval(updateCountdown, 1000);
+            updateCountdown();
+            
+            // Intersection Observer para animações ao rolar
+            const animatedElements = document.querySelectorAll('.animate-on-scroll');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            animatedElements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
