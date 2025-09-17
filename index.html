@@ -150,12 +150,22 @@
             z-index: -1; 
         }
         .hero-content { max-width: 800px; }
-        .hero h1 { font-size: 2.5rem; color: white; margin-bottom: 1rem; line-height: 1.3; }
+        .hero h1 { font-size: 2.5rem; color: white; margin-bottom: 1rem; line-height: 1.3; padding: 0 1rem; }
         .hero p { font-size: 1.15rem; margin-bottom: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto; color: rgba(255,255,255,0.85); }
         .countdown { display: flex; gap: 1rem; justify-content: center; margin-top: 2rem; }
         .countdown > div { background-color: rgba(0,0,0,0.2); padding: 1rem; border-radius: var(--radius); min-width: 90px; }
         .countdown-number { font-size: 2.5rem; font-weight: 700; line-height: 1; color: var(--accent); }
         .countdown-label { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,0.7); }
+        
+        @media (max-width: 767px) {
+            .hero-content { padding: 0 1rem; }
+            .hero h1 { font-size: 2rem; padding: 0; }
+            .hero p { padding: 0; }
+            .countdown { flex-wrap: wrap; }
+            .countdown > div { min-width: 70px; padding: 0.75rem; }
+            .countdown-number { font-size: 2rem; }
+            .countdown-label { font-size: 0.75rem; }
+        }
 
         @media (min-width: 768px) {
             .hero h1 { font-size: 3.5rem; }
@@ -264,41 +274,39 @@
                 
                 <div class="schedule-items-container animate-on-scroll">
                     <article class="schedule-item" data-day="dia-03" data-type="tipo-minicurso">
-                        <header><h3>Minicurso: Da margem ao centro...</h3> <span class="schedule-time">14:00 – 17:00</span></header>
-                        <p><strong>Com:</strong> Karyelly Guimarães Moreira & Carlos</p>
+                        <header><h3>Minicurso: Educação antirracista no ensino de linguagens</h3> <span class="schedule-time">14:00 – 17:00</span></header>
+                        <p><strong>Com:</strong> Karyelly Guimarães Moreira & Carlos Matheus da Silva Mello</p>
                     </article>
                     <article class="schedule-item" data-day="dia-03" data-type="tipo-conferencia">
-                        <header><h3>Conferência de Abertura</h3> <span class="schedule-time">21:30 – 22:20</span></header>
-                        <p>"África e Brasil: linguagens em movimento"</p>
+                        <header><h3>Conferência: África e Brasil: linguagens em movimento</h3> <span class="schedule-time">21:30 – 22:20</span></header>
                         <p><strong>Com:</strong> Profa. Dra. Rita Chaves (USP)</p>
                     </article>
                     
                     <article class="schedule-item" data-day="dia-04" data-type="tipo-minicurso">
-                        <header><h3>Minicurso: Mulher, cultura e literatura...</h3> <span class="schedule-time">09:00 – 12:00</span></header>
+                        <header><h3>Minicurso: Mulher, cultura e literatura: Interações entre Brasil e Cabo Verde</h3> <span class="schedule-time">14:00 – 17:00</span></header>
                         <p><strong>Com:</strong> Profa. Dra. Sônia Santos</p>
                     </article>
                     <article class="schedule-item" data-day="dia-04" data-type="tipo-mesa-redonda">
-                        <header><h3>Mesa-redonda: Narrativas da Diáspora</h3><span class="schedule-time">14:00 – 16:00</span></header>
+                        <header><h3>Mesa-redonda: Ensino de Literaturas Africanas e Afro-brasileira</h3><span class="schedule-time">19:40 – 21:10</span></header>
                         <ul>
-                            <li>Prof. Dr. José Humberto dos Anjos</li>
-                            <li>Profa. Dra. Norma Lima</li>
-                            <li>Prof. Dr. Dirlenvalder do Nascimento</li>
+                            <li>Prof. Dr.José Humberto dos Anjos (UFG)</li>
+                            <li>Profª. Drª Norma Sueli Rosa Lima (UERJ-PROFLETRAS)</li>
                         </ul>
                     </article>
                     <article class="schedule-item" data-day="dia-04" data-type="tipo-conferencia">
-                        <header><h3>Conferência: "O tema-mundo colonial"</h3><span class="schedule-time">21:30 – 22:20</span></header>
+                        <header><h3>Conferência: O romance histórico africano (Angola e Moçambique): a relutância da rainha Ginga e do imperador Gungunhana ao sistema-mundo colonial</h3><span class="schedule-time">21:30 – 22:20</span></header>
                         <p><strong>Com:</strong> Prof. Dr. Edvaldo Bergamo (UnB)</p>
                     </article>
 
                     <article class="schedule-item" data-day="dia-05" data-type="tipo-mesa-redonda">
-                        <header><h3>Mesa-redonda: Ensino de Literaturas Africanas</h3><span class="schedule-time">16:00 – 18:00</span></header>
+                        <header><h3>Mesa-redonda: O Processo Criativo de Escritores Afro-brasileiros</h3><span class="schedule-time">20:00 – 21:10</span></header>
                         <ul>
-                            <li>Profa. Dra. Lilian W. P. de Souza</li>
-                            <li>Prof. Dr. Samuel de Jesus</li>
+                            <li>Profa. Dra. Lilian Paula Serra e Deus (UNILAB)</li>
+                            <li>Prof. Dr. Dirlenvalder Loyolla (UNIFESSPA)</li>
                         </ul>
                     </article>
                     <article class="schedule-item" data-day="dia-05" data-type="tipo-conferencia">
-                        <header><h3>Conferência de Encerramento</h3> <span class="schedule-time">21:20 – 22:00</span></header>
+                        <header><h3>Conferência de Encerramento: Traços e gestos da escrita literária de Conceição Evaristo</h3> <span class="schedule-time">21:20 – 22:00</span></header>
                         <p><strong>Com:</strong> Profa. Dra. Maria Nazareth Soares Fonseca (UFMG)</p>
                     </article>
                 </div>
@@ -323,7 +331,7 @@
                         <div class="speaker-info">
                             <h3>Prof. Dr. Edvaldo Bergamo</h3>
                             <p class="affiliation">UnB</p>
-                            <p class="talk-title">"O tema-mundo colonial e a literatura"</p>
+                            <p class="talk-title">"O romance histórico africano (Angola e Moçambique): a relutância da rainha Ginga e do imperador Gungunhana ao sistema-mundo colonial"</p>
                             <button class="btn btn-outline bio-btn" data-speaker="edvaldo-bergamo">Ver Bio</button>
                         </div>
                     </article>
@@ -340,8 +348,8 @@
                         <img src="https://animaisueg.free.nf/Sonia.jpg" alt="Foto da Profa. Dra. Sônia Santos" loading="lazy">
                         <div class="speaker-info">
                             <h3>Profa. Dra. Sônia Santos</h3>
-                            <p class="affiliation">Ministrante de Minicurso</p>
-                            <p class="talk-title">Minicurso: "Mulher, cultura e literatura..."</p>
+                            <p class="affiliation">FeMASS</p>
+                            <p class="talk-title">Minicurso: "Mulher, cultura e literatura: Interações entre Brasil e Cabo Verde"</p>
                             <button class="btn btn-outline bio-btn" data-speaker="sonia-santos">Ver Bio</button>
                         </div>
                     </article>
@@ -353,14 +361,14 @@
             <div class="container">
                 <h2 class="section-title animate-on-scroll">Minicursos</h2>
                 <div class="card minicurso-card animate-on-scroll">
-                    <h3>Da margem ao centro: a literatura como ferramenta de empoderamento e cidadania</h3>
-                    <p><strong>Com:</strong> Karyelly Guimarães Moreira & Carlos</p>
+                    <h3>Educação antirracista no ensino de linguagens</h3>
+                    <p><strong>Com:</strong> Karyelly Guimarães Moreira & Carlos Matheus da Silva Mello</p>
                     <p><strong>Data:</strong> 03.11 | <strong>Horário:</strong> 14:00–17:00 | <strong>Vagas:</strong> 30</p>
                 </div>
                 <div class="card minicurso-card animate-on-scroll" style="transition-delay: 100ms;">
-                    <h3>Mulher, cultura e literatura: uma análise da produção feminina em África e no Brasil</h3>
+                    <h3>Mulher, cultura e literatura: Interações entre Brasil e Cabo Verde</h3>
                     <p><strong>Com:</strong> Profa. Dra. Sônia Santos</p>
-                    <p><strong>Data:</strong> 04.11 | <strong>Horário:</strong> 09:00–12:00 | <strong>Vagas:</strong> 30</p>
+                    <p><strong>Data:</strong> 04.11 | <strong>Horário:</strong> 14:00–17:00 | <strong>Vagas:</strong> 30</p>
                 </div>
             </div>
         </section>
