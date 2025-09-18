@@ -191,6 +191,11 @@
         @media (min-width: 768px) {
             .schedule-item header { flex-direction: row; justify-content: space-between; align-items: center; }
         }
+        
+        .gts { background-color: var(--background); }
+        .gt-card { padding: 1.5rem; margin-bottom: 1rem; }
+        .gt-card h3 { color: var(--primary); margin-bottom: 0.5rem; }
+        .gt-card p { margin-bottom: 0.5rem; }
 
         .speakers-grid { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
         .speaker-card { text-align: center; overflow: hidden; }
@@ -216,12 +221,18 @@
         .support-logos img { max-height: 50px; filter: brightness(0) invert(1); opacity: 0.8; transition: opacity 0.3s; }
         .support-logos img:hover { opacity: 1; }
         .footer-bottom { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.2); font-size: 0.9rem; opacity: 0.8; }
+        .footer-section p { margin-bottom: 0.5rem; }
+        .footer-section h4 { margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 1px; font-size: 1rem;}
+
 
         .modal { display: none; position: fixed; z-index: 1001; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(15, 23, 42, 0.8); backdrop-filter: blur(5px); animation: fadeIn 0.3s ease; }
-        .modal-content { background-color: var(--background); margin: 10vh auto; padding: 2rem; border-radius: var(--radius); max-width: 500px; width: 90%; position: relative; animation: scaleIn 0.3s ease; box-shadow: var(--shadow-md); }
+        .modal-content { background-color: var(--background); margin: 5vh auto; padding: 2rem; border-radius: var(--radius); max-width: 700px; width: 90%; position: relative; animation: scaleIn 0.3s ease; box-shadow: var(--shadow-md); max-height: 90vh; overflow-y: auto;}
         .close-btn { color: #aaa; position: absolute; top: 0.5rem; right: 1rem; font-size: 2rem; font-weight: bold; cursor: pointer; transition: color 0.2s; }
         .close-btn:hover { color: var(--foreground); }
-        #bio-content h3 { margin-bottom: 1rem; }
+        .modal-content h3 { margin-bottom: 1rem; }
+        .modal-content h4 { margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--primary); }
+        .modal-content ul { list-style-position: inside; padding-left: 1rem; }
+        .modal-content li { margin-bottom: 0.5rem; }
 
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
         @keyframes scaleIn { from { transform: scale(0.9); opacity: 0; } to { transform: scale(1); opacity: 1; } }
@@ -240,13 +251,14 @@
             <nav class="main-nav" id="main-nav">
                 <ul>
                     <li><a href="#cronograma">Programação</a></li>
+                    <li><a href="#gts">Grupos de Trabalho</a></li>
                     <li><a href="#palestrantes">Palestrantes</a></li>
                     <li><a href="#minicursos">Minicursos</a></li>
                     <li><a href="#local">Local</a></li>
                 </ul>
-                <a href="https://www.even3.com.br/i-seminario-de-literaturas-africanas-e-afro-brasileira-ensino-pesquisa-e-cidadania-625801" target="_blank" class="btn btn-primary">Inscreva-se</a>
+                <button class="btn btn-primary submission-btn">Inscreva-se</button>
             </nav>
-            <a href="https://www.even3.com.br/i-seminario-de-literaturas-africanas-e-afro-brasileira-ensino-pesquisa-e-cidadania-625801" target="_blank" class="btn btn-primary inscription-btn-header">Inscreva-se</a>
+            <button class="btn btn-primary inscription-btn-header submission-btn">Inscreva-se</button>
             <button class="hamburger" id="hamburger" aria-label="Abrir menu">
                 <span></span><span></span><span></span>
             </button>
@@ -273,39 +285,53 @@
                 </div>
                 
                 <div class="schedule-items-container animate-on-scroll">
-                    <article class="schedule-item" data-day="dia-03" data-type="tipo-minicurso">
+                    <article class="schedule-item" data-day="dia-03">
                         <header><h3>Minicurso: Educação antirracista no ensino de linguagens</h3> <span class="schedule-time">14:00 – 17:00</span></header>
-                        <p><strong>Com:</strong> Karyelly Guimarães Moreira & Carlos Matheus da Silva Mello</p>
+                        <p><strong>Com:</strong> Prof. Ms. Karyelly Guimarães Moreira & Prof.Ms. Carlos Matheus da Silva Mello</p>
                     </article>
-                    <article class="schedule-item" data-day="dia-03" data-type="tipo-conferencia">
-                        <header><h3>Conferência: África e Brasil: linguagens em movimento</h3> <span class="schedule-time">21:30 – 22:20</span></header>
+                    <article class="schedule-item" data-day="dia-03">
+                        <header><h3>Mesa-redonda 1: Escritores/intelectuais afro- brasileiros</h3> <span class="schedule-time">20:10 – 21:10</span></header>
+                        <ul>
+                            <li><strong>Profa. Dra. Sônia Santos (FeMASS):</strong> Escritas Insubmissas: a casa crioula na literatura feminina de Cabo Verde</li>
+                            <li><strong>Prof. Dr. Junior César F. de Castro (UFMT):</strong> A Poética da Ausência e a tradição da Ruptura: do apagamento negro ao movimento da Negritude na poesia lírica brasileira</li>
+                            <li><strong>Moderadora:</strong> Profa. Ms. Karyelly Guimarães Moreira (Doutoranda do IELT-UEG)</li>
+                        </ul>
+                    </article>
+                    <article class="schedule-item" data-day="dia-03">
+                        <header><h3>Conferência: África e Brasil: linguagens em movimento</h3> <span class="schedule-time">21:30 – 22:10</span></header>
                         <p><strong>Com:</strong> Profa. Dra. Rita Chaves (USP)</p>
                     </article>
                     
-                    <article class="schedule-item" data-day="dia-04" data-type="tipo-minicurso">
+                    <article class="schedule-item" data-day="dia-04">
                         <header><h3>Minicurso: Mulher, cultura e literatura: Interações entre Brasil e Cabo Verde</h3> <span class="schedule-time">14:00 – 17:00</span></header>
                         <p><strong>Com:</strong> Profa. Dra. Sônia Santos</p>
                     </article>
-                    <article class="schedule-item" data-day="dia-04" data-type="tipo-mesa-redonda">
-                        <header><h3>Mesa-redonda: Ensino de Literaturas Africanas e Afro-brasileira</h3><span class="schedule-time">19:40 – 21:10</span></header>
+                    <article class="schedule-item" data-day="dia-04">
+                        <header><h3>Mesa-redonda 2: Ensino de Literaturas Africanas e Afro-brasileira</h3><span class="schedule-time">19:40 – 21:10</span></header>
                         <ul>
-                            <li>Prof. Dr.José Humberto dos Anjos (UFG)</li>
-                            <li>Profª. Drª Norma Sueli Rosa Lima (UERJ-PROFLETRAS)</li>
+                            <li><strong>Profª. Drª Norma Sueli Rosa Lima (UERJ-PROFLETRAS):</strong> Literaturas afro-brasileira e cabo-verdiana: ensino e diversidade</li>
+                            <li><strong>Prof. Dr.José Humberto dos Anjos (UFG):</strong> Ensinar e aprender com as literaturas afro-brasileiras</li>
+                            <li><strong>Moderador:</strong> Prof. Dra. Viviane Farias Lopes (UEG-Poslli-Linterfaces)</li>
                         </ul>
                     </article>
-                    <article class="schedule-item" data-day="dia-04" data-type="tipo-conferencia">
-                        <header><h3>Conferência: O romance histórico africano (Angola e Moçambique): a relutância da rainha Ginga e do imperador Gungunhana ao sistema-mundo colonial</h3><span class="schedule-time">21:30 – 22:20</span></header>
+                    <article class="schedule-item" data-day="dia-04">
+                        <header><h3>Conferência: O romance histórico africano (Angola e Moçambique): a relutância da rainha Ginga e do imperador Gungunhana ao sistema-mundo colonial</h3><span class="schedule-time">21:30 – 22:10</span></header>
                         <p><strong>Com:</strong> Prof. Dr. Edvaldo Bergamo (UnB)</p>
                     </article>
-
-                    <article class="schedule-item" data-day="dia-05" data-type="tipo-mesa-redonda">
-                        <header><h3>Mesa-redonda: O Processo Criativo de Escritores Afro-brasileiros</h3><span class="schedule-time">20:00 – 21:10</span></header>
+                    
+                    <article class="schedule-item" data-day="dia-05">
+                        <header><h3>Minicurso: Metrificação e cia.: teoria e prática da versificação</h3> <span class="schedule-time">14:00 – 17:00</span></header>
+                        <p><strong>Com:</strong> Prof. Dr. Dirlenvalder Loyolla (UNIFESSPA)</p>
+                    </article>
+                    <article class="schedule-item" data-day="dia-05">
+                        <header><h3>Mesa-redonda 3: O Processo Criativo de Escritores Afro-brasileiros</h3><span class="schedule-time">20:00 – 21:10</span></header>
                         <ul>
-                            <li>Profa. Dra. Lilian Paula Serra e Deus (UNILAB)</li>
-                            <li>Prof. Dr. Dirlenvalder Loyolla (UNIFESSPA)</li>
+                             <li><strong>Profa. Dra. Lilian Paula Serra e Deus (UNILAB):</strong> Literatura e escrevivência do(s) trauma(s)</li>
+                             <li><strong>Prof. Dr. Dirlenvalder Loyolla (UNIFESSPA):</strong> A crônica da vida de Lima Barreto e a crônica devida de Carolina Maria de Jesus: entre a crítica e a crise</li>
+                             <li><strong>Moderador:</strong> Prof. Dr. Samuel Carlos Melo (Coordenador do PPG- Poslli-UEG)</li>
                         </ul>
                     </article>
-                    <article class="schedule-item" data-day="dia-05" data-type="tipo-conferencia">
+                    <article class="schedule-item" data-day="dia-05">
                         <header><h3>Conferência de Encerramento: Traços e gestos da escrita literária de Conceição Evaristo</h3> <span class="schedule-time">21:20 – 22:00</span></header>
                         <p><strong>Com:</strong> Profa. Dra. Maria Nazareth Soares Fonseca (UFMG)</p>
                     </article>
@@ -313,6 +339,42 @@
             </div>
         </section>
 
+        <section id="gts" class="gts">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Grupos de Trabalho (GTs)</h2>
+                 <div class="card gt-card animate-on-scroll">
+                    <h3>GT01: Relações Raciais e Direitos Humanos</h3>
+                    <p><strong>Coordenadora:</strong> Profa. Ms. Nágila Alves (Doutoranda – UFPI)</p>
+                    <p><strong>Data:</strong> 03.11 | <strong>Horário:</strong> 08:00–11:00 | <strong>Modalidade:</strong> Online</p>
+                </div>
+                <div class="card gt-card animate-on-scroll">
+                    <h3>GT02: Tecendo Vozes Negras: Literatura, Mídias e Educação em Perspectiva Afrocentrada</h3>
+                    <p><strong>Coordenadores:</strong> Karyelly Guimarães Moreira (Doutoranda IELT –UEG) & Carlos Matheus da Silva Mello (Doutorando IELT-UEG)</p>
+                    <p><strong>Data:</strong> 04.11 | <strong>Horário:</strong> 08:00–11:00 | <strong>Modalidade:</strong> Presencial</p>
+                </div>
+                 <div class="card gt-card animate-on-scroll">
+                    <h3>GT03: Literatura infantil e juvenil e as relações etnico-raciais</h3>
+                    <p><strong>Coordenadores:</strong> Prof. Dr. José Humberto dos Anjos (UFG) & Lauriana Fogaça Ferreira dos Santos (Mestranda UEG-Poslli)</p>
+                    <p><strong>Data:</strong> 04.11 | <strong>Horário:</strong> 08:00–11:00 | <strong>Modalidade:</strong> Presencial</p>
+                </div>
+                <div class="card gt-card animate-on-scroll">
+                    <h3>GT04: Políticas afirmativas</h3>
+                    <p><strong>Coordenador:</strong> Prof. Dr. Alexandre Mariotto Botton (Unemat)</p>
+                    <p><strong>Data:</strong> 04.11 | <strong>Horário:</strong> 08:00–11:00 | <strong>Modalidade:</strong> Online</p>
+                </div>
+                <div class="card gt-card animate-on-scroll">
+                    <h3>GT05: Entre o silenciamento e a denúncia: as violências presentes nas narrativas contemporâneas de autoria feminina</h3>
+                    <p><strong>Coordenadores:</strong> Prof. Dr. Celiomar Profírio Ramos (UEA) & Profa. Dra. Marinei Almeida (Unemat)</p>
+                    <p><strong>Data:</strong> 05.11 | <strong>Horário:</strong> 08:00–11:00 | <strong>Modalidade:</strong> Online</p>
+                </div>
+                 <div class="card gt-card animate-on-scroll">
+                    <h3>GT06: Branquitude crítica e a literatura</h3>
+                    <p><strong>Coordenadora:</strong> Profa. Dra. Ana Colantoni (UFG)</p>
+                    <p><strong>Data:</strong> 05.11 | <strong>Horário:</strong> 14:00–17:00 | <strong>Modalidade:</strong> Online</p>
+                </div>
+            </div>
+        </section>
+        
         <section id="palestrantes">
             <div class="container">
                 <h2 class="section-title animate-on-scroll">Palestrantes</h2>
@@ -331,7 +393,7 @@
                         <div class="speaker-info">
                             <h3>Prof. Dr. Edvaldo Bergamo</h3>
                             <p class="affiliation">UnB</p>
-                            <p class="talk-title">"O romance histórico africano (Angola e Moçambique): a relutância da rainha Ginga e do imperador Gungunhana ao sistema-mundo colonial"</p>
+                            <p class="talk-title">"O romance histórico africano (Angola e Moçambique)..."</p>
                             <button class="btn btn-outline bio-btn" data-speaker="edvaldo-bergamo">Ver Bio</button>
                         </div>
                     </article>
@@ -349,7 +411,7 @@
                         <div class="speaker-info">
                             <h3>Profa. Dra. Sônia Santos</h3>
                             <p class="affiliation">FeMASS</p>
-                            <p class="talk-title">Minicurso: "Mulher, cultura e literatura: Interações entre Brasil e Cabo Verde"</p>
+                            <p class="talk-title">Minicurso e Mesa-Redonda</p>
                             <button class="btn btn-outline bio-btn" data-speaker="sonia-santos">Ver Bio</button>
                         </div>
                     </article>
@@ -370,6 +432,11 @@
                     <p><strong>Com:</strong> Profa. Dra. Sônia Santos</p>
                     <p><strong>Data:</strong> 04.11 | <strong>Horário:</strong> 14:00–17:00 | <strong>Vagas:</strong> 30</p>
                 </div>
+                 <div class="card minicurso-card animate-on-scroll" style="transition-delay: 200ms;">
+                    <h3>Metrificação e cia.: teoria e prática da versificação</h3>
+                    <p><strong>Com:</strong> Prof. Dr. Dirlenvalder Loyolla (UNIFESSPA)</p>
+                    <p><strong>Data:</strong> 05.11 | <strong>Horário:</strong> 14:00–17:00 | <strong>Vagas:</strong> 30</p>
+                </div>
             </div>
         </section>
 
@@ -385,7 +452,7 @@
                     </div>
                     <div class="animate-on-scroll" style="transition-delay: 100ms;">
                         <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3835.4985289945533!2d-48.28825868514264!3d-17.301323988107957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94a1005a89e9f29d%3A0x6097d620573e3489!2sUniversidade%20Estadual%20de%20Goi%C3%A1s%20-%20Campus%20Pires%20do%20Rio!5e0!3m2!1spt-BR!2sbr!4v1662589134361!5m2!1spt-BR!2sbr"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3835.856660601551!2d-48.2916986851429!3d-17.29910598816694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94a660f60e9b9c0b%3A0x53a3a413337914e0!2sUniversidade%20Estadual%20de%20Goi%C3%A1s%20-%20Campus%20Pires%20do%20Rio!5e0!3m2!1spt-BR!2sbr!4v1663368291414!5m2!1spt-BR!2sbr"
                             allowfullscreen="" 
                             loading="lazy" 
                             referrerpolicy="no-referrer-when-downgrade">
@@ -398,14 +465,29 @@
 
     <footer class="main-footer">
         <div class="container">
-            <div class="support-logos">
-                <img src="https://animaisueg.free.nf/Neabi.png" alt="NEABI - Núcleo de estudos Afro-brasileiros e Indígenas">
-                <img src="https://animaisueg.free.nf/afrolic.png" alt="Afrolic">
-                <img src="https://animaisueg.free.nf/Seliafro.png" alt="SELIAFRO">
+             <div class="footer-section">
+                <h4>Apoio e Parcerias</h4>
+                <div class="support-logos">
+                    <img src="https://animaisueg.free.nf/Neabi.png" alt="NEABI - Núcleo de estudos Afro-brasileiros e Indígenas">
+                    <img src="https://animaisueg.free.nf/afrolic.png" alt="Afrolic">
+                    <img src="https://animaisueg.free.nf/Seliafro.png" alt="SELIAFRO">
+                </div>
+                <p>LINTERFACES – Literatura em Interfaces: Transdisciplinaridade e Interculturalidade</p>
+                <p>NEABI – Núcleo de Estudos Afro-Brasileiros e Indígenas – UFG – Câmpus Goiás</p>
+                <p>AFROLIC - Associação Internacional de Estudos Literários e Culturais Africanos</p>
+                 <br>
+                <h4>Apoio Financeiro</h4>
+                <p>FAPEG – Fundação de Amparo à Pesquisa do Estado de Goiás</p>
             </div>
-            <p>I Seminário de Literaturas Africanas e Afro-brasileira</p>
-            <p>Contato: eventoseliafro@gmail.com</p>
+
             <div class="footer-bottom">
+                <h4>Instituições Promotoras</h4>
+                <p>Universidade Estadual de Goiás – Unidade Universitária de Pires do Rio – Curso de Letras</p>
+                <p>Programa de Pós-Graduação de Língua, Literatura e Interculturalidade – Poslli – UEG</p>
+                <p>Universidade do Estado do Mato Grosso - UNEMAT</p>
+                 <br>
+                <p>I Seminário de Literaturas Africanas e Afro-brasileira</p>
+                <p>Contato: eventoseliafro@gmail.com</p>
                 <p>© 2025 UEG - Campus Pires do Rio. Todos os direitos reservados.</p>
             </div>
         </div>
@@ -415,6 +497,66 @@
         <div class="modal-content">
             <span class="close-btn" id="close-bio-btn">×</span>
             <div id="bio-content"></div>
+        </div>
+    </div>
+
+    <div id="submission-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-submission-btn">×</span>
+            <div id="submission-content">
+                <h3>Instruções para Inscrição e Submissão</h3>
+                
+                <h4>1. Modalidades de Submissão</h4>
+                <p><strong>A. Comunicação Oral (Grupos de Trabalho – GTs)</strong></p>
+                <p>As propostas devem estar vinculadas a um dos GTs aprovados pelo evento. Cada proposta deve conter:</p>
+                <ul>
+                    <li>Título da comunicação</li>
+                    <li>Resumo expandido (entre 300 e 500 palavras), com:
+                        <ul>
+                            <li>Introdução do tema</li>
+                            <li>Objetivos</li>
+                            <li>Referencial teórico</li>
+                            <li>Metodologia (se houver)</li>
+                            <li>Resultados esperados ou em andamento</li>
+                        </ul>
+                    </li>
+                     <li>De 3 a 5 palavras-chave</li>
+                    <li>Nome completo do(a) autor(a) e coautor(a), se houver</li>
+                    <li>Instituição de vínculo e titulação</li>
+                    <li>E-mail de contato</li>
+                </ul>
+
+                <h4>2. Prazos Importantes</h4>
+                <ul>
+                    <li><strong>Inscrições com Comunicação:</strong> Até 20 de outubro de 2025</li>
+                    <li><strong>Divulgação dos Resultados:</strong> Até 30 de outubro de 2025</li>
+                    <li><strong>Inscrições como Ouvinte:</strong> Até 02 de novembro de 2025</li>
+                </ul>
+
+                <h4>3. Categorias e Taxas</h4>
+                <p><strong>Ouvinte:</strong> Inscrições gratuitas.</p>
+                <p><strong>Apresentador(a) de comunicação:</strong></p>
+                <ul>
+                    <li>Estudante de Graduação: R$ 30,00</li>
+                    <li>Estudante de Pós-Graduação: R$ 40,00</li>
+                    <li>Professor da Educação Básica: R$ 40,00</li>
+                    <li>Professor do Ensino Superior: R$ 50,00</li>
+                </ul>
+                <p><em>Obs: Alunos de pós-graduação e graduação com carência comprovada (CadÚnico) podem solicitar isenção da taxa via email: seliafro@ueg.br até 30.09.</em></p>
+
+                <h4>4. Dados Bancários para Pagamento</h4>
+                <p>
+                    <strong>Banco do Brasil</strong><br>
+                    <strong>Titular:</strong> JANE ADRIANE GANDRA<br>
+                    <strong>Agência:</strong> 0104-X<br>
+                    <strong>Conta Poupança:</strong> 201.307-X (Variação 51)<br>
+                    <strong>Chave PIX:</strong> seliafro@ueg.br
+                </p>
+
+                <a href="https://www.even3.com.br/i-seminario-de-literaturas-africanas-e-afro-brasileira-ensino-pesquisa-e-cidadania-625801" target="_blank" class="btn btn-primary" style="margin-top: 1.5rem; width: 100%; text-align: center;">
+                    Realizar Inscrição no Even3
+                </a>
+            </div>
         </div>
     </div>
     
@@ -428,6 +570,7 @@
                 nav.classList.toggle('active');
             });
             
+            // --- Modal de Biografias ---
             const bioModal = document.getElementById('bio-modal');
             const bioBtns = document.querySelectorAll('.bio-btn');
             const closeBioBtn = document.getElementById('close-bio-btn');
@@ -450,15 +593,36 @@
                 });
             });
 
-            const closeModal = () => bioModal.style.display = 'none';
-            closeBioBtn.addEventListener('click', closeModal);
-            window.addEventListener('click', (event) => {
-                if (event.target == bioModal) closeModal();
-            });
-            window.addEventListener('keydown', (event) => {
-                if (event.key === 'Escape') closeModal();
+            const closeBioModal = () => bioModal.style.display = 'none';
+            closeBioBtn.addEventListener('click', closeBioModal);
+
+            // --- Modal de Inscrições ---
+            const submissionModal = document.getElementById('submission-modal');
+            const submissionBtns = document.querySelectorAll('.submission-btn');
+            const closeSubmissionBtn = document.getElementById('close-submission-btn');
+
+            submissionBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    submissionModal.style.display = 'block';
+                });
             });
 
+            const closeSubmissionModal = () => submissionModal.style.display = 'none';
+            closeSubmissionBtn.addEventListener('click', closeSubmissionModal);
+
+            // Fechar modais clicando fora ou com a tecla Esc
+            window.addEventListener('click', (event) => {
+                if (event.target == bioModal) closeBioModal();
+                if (event.target == submissionModal) closeSubmissionModal();
+            });
+            window.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape') {
+                    closeBioModal();
+                    closeSubmissionModal();
+                }
+            });
+
+            // --- Filtro da Programação ---
             const filterBtns = document.querySelectorAll('.filter-btn');
             const scheduleItems = document.querySelectorAll('.schedule-item');
             filterBtns.forEach(btn => {
@@ -478,6 +642,7 @@
                 });
             });
 
+            // --- Contagem Regressiva ---
             const countdownElement = document.getElementById('countdown');
             const eventDate = new Date('November 3, 2025 09:00:00').getTime();
             const updateCountdown = () => {
@@ -486,7 +651,7 @@
 
                 if (distance < 0) {
                     clearInterval(countdownInterval);
-                    countdownElement.innerHTML = "O evento já começou!";
+                    countdownElement.innerHTML = "<h4>O evento já começou!</h4>";
                     return;
                 }
                 const days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -504,7 +669,7 @@
             const countdownInterval = setInterval(updateCountdown, 1000);
             updateCountdown();
             
-            // Intersection Observer para animações ao rolar
+            // --- Animações ao Rolar (Intersection Observer) ---
             const animatedElements = document.querySelectorAll('.animate-on-scroll');
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
