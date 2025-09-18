@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>I Seminário de Literaturas Africanas e Afro-brasileira: Ensino e...</title>
-    <meta name="description" content="Participe do I Seminário de Literaturas Africanas e Afro-brasileira: Ensino, Pesquisa e Cidadania. De 03 a 05 de novembro na UEG - Campus Pires do Rio.">
+    <meta name="description"
+        content="Participe do I Seminário de Literaturas Africanas e Afro-brasileira: Ensino, Pesquisa e Cidadania. De 03 a 05 de novembro na UEG - Campus Pires do Rio.">
     <meta property="og:title" content="I Seminário de Literaturas Africanas e Afro-brasileira: Ensino e...">
-    <meta property="og:description" content="Evento presencial e híbrido com conferências, minicursos e mesas-redondas sobre o ensino e pesquisa em literaturas africanas e afro-brasileira.">
+    <meta property="og:description"
+        content="Evento presencial e híbrido com conferências, minicursos e mesas-redondas sobre o ensino e pesquisa em literaturas africanas e afro-brasileira.">
     <meta property="og:image" content="assets/postagem_1.jpg">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
@@ -31,11 +34,13 @@
             --border: hsl(210, 20%, 88%);
             --radius: 0.75rem;
             --font-sans: 'Poppins', sans-serif;
-            --shadow-sm: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -2px rgba(0,0,0,0.05);
-            --shadow-md: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+            --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
         }
 
-        *, *::before, *::after {
+        *,
+        *::before,
+        *::after {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
@@ -64,18 +69,21 @@
             padding: 4rem 0;
         }
 
-        h1, h2, h3 {
+        h1,
+        h2,
+        h3 {
             line-height: 1.2;
             color: var(--primary);
             font-weight: 700;
         }
-        
+
         /* Animação de entrada */
         .animate-on-scroll {
             opacity: 0;
             transform: translateY(20px);
             transition: opacity 0.6s ease-out, transform 0.6s ease-out;
         }
+
         .animate-on-scroll.is-visible {
             opacity: 1;
             transform: translateY(0);
@@ -93,12 +101,35 @@
             transition: background-color 0.3s;
         }
 
-        .header-content { display: flex; justify-content: space-between; align-items: center; }
-        .logo-container { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
-        .logo-container img { height: 40px; }
-        .event-title-header h1 { font-size: 0.9rem; font-weight: 600; color: var(--primary); line-height: 1.3; }
-        .event-title-header p { font-size: 0.75rem; color: var(--muted-foreground); }
-        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+        }
+
+        .logo-container img {
+            height: 40px;
+        }
+
+        .event-title-header h1 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--primary);
+            line-height: 1.3;
+        }
+
+        .event-title-header p {
+            font-size: 0.75rem;
+            color: var(--muted-foreground);
+        }
+
         .main-nav {
             display: none;
             flex-direction: column;
@@ -110,134 +141,584 @@
             border-bottom: 1px solid var(--border);
             padding: 1rem 0;
         }
-        .main-nav.active { display: flex; }
-        .main-nav ul { list-style: none; width: 100%; }
-        .main-nav a { display: block; padding: 0.75rem 5%; text-decoration: none; color: var(--foreground); font-weight: 500; transition: background-color 0.2s, color 0.2s; }
-        .main-nav a:hover { background-color: var(--secondary); color: var(--accent); }
-        .main-nav .btn { margin: 1rem 5% 0; text-align: center; }
 
-        .btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.75rem 1.5rem; border-radius: var(--radius); text-decoration: none; font-weight: 600; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); cursor: pointer; border: 2px solid transparent; }
-        .btn-primary { background-color: var(--accent); color: var(--accent-foreground); }
-        .btn-primary:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); opacity: 0.9; }
-        .btn-outline { border-color: var(--accent); color: var(--accent); background: transparent; }
-        .btn-outline:hover { background: var(--accent); color: var(--accent-foreground); transform: translateY(-2px); }
-        
-        .inscription-btn-header { display: none; }
-        .hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; border: none; background: none; padding: 5px; z-index: 1001; }
-        .hamburger span { display: block; width: 25px; height: 3px; background-color: var(--primary); transition: all 0.3s ease-in-out; border-radius: 3px; }
-        .hamburger.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
-        .hamburger.active span:nth-child(2) { opacity: 0; }
-        .hamburger.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
-        
+        .main-nav.active {
+            display: flex;
+        }
+
+        .main-nav ul {
+            list-style: none;
+            width: 100%;
+        }
+
+        .main-nav a {
+            display: block;
+            padding: 0.75rem 5%;
+            text-decoration: none;
+            color: var(--foreground);
+            font-weight: 500;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        .main-nav a:hover {
+            background-color: var(--secondary);
+            color: var(--accent);
+        }
+
+        .main-nav .btn {
+            margin: 1rem 5% 0;
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: var(--accent-foreground);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            opacity: 0.9;
+        }
+
+        .btn-outline {
+            border-color: var(--accent);
+            color: var(--accent);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: var(--accent);
+            color: var(--accent-foreground);
+            transform: translateY(-2px);
+        }
+
+        .inscription-btn-header {
+            display: none;
+        }
+
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            border: none;
+            background: none;
+            padding: 5px;
+            z-index: 1001;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: var(--primary);
+            transition: all 0.3s ease-in-out;
+            border-radius: 3px;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+
         @media (min-width: 820px) {
-            .hamburger { display: none; }
-            .inscription-btn-header { display: inline-flex; }
-            .main-nav { display: flex; flex-direction: row; position: static; width: auto; border: none; padding: 0; align-items: center; background: none; }
-            .main-nav ul { display: flex; width: auto; }
-            .main-nav a { padding: 0.5rem 1rem; border-radius: var(--radius); }
-            .main-nav a:hover { background-color: var(--secondary); color: var(--accent); }
-            .main-nav .btn { display: none; }
+            .hamburger {
+                display: none;
+            }
+
+            .inscription-btn-header {
+                display: inline-flex;
+            }
+
+            .main-nav {
+                display: flex;
+                flex-direction: row;
+                position: static;
+                width: auto;
+                border: none;
+                padding: 0;
+                align-items: center;
+                background: none;
+            }
+
+            .main-nav ul {
+                display: flex;
+                width: auto;
+            }
+
+            .main-nav a {
+                padding: 0.5rem 1rem;
+                border-radius: var(--radius);
+            }
+
+            .main-nav a:hover {
+                background-color: var(--secondary);
+                color: var(--accent);
+            }
+
+            .main-nav .btn {
+                display: none;
+            }
         }
 
-        .hero { position: relative; text-align: center; color: white; padding: 6rem 0; display: flex; align-items: center; justify-content: center; min-height: 80vh; overflow: hidden; }
-        .hero::before { 
-            content: ''; 
-            position: absolute; 
-            inset: 0; 
-            background-image: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.9)), url('https://animaisueg.free.nf/fundo.svg'); 
-            background-size: cover; 
-            background-position: center; 
-            z-index: -1; 
+        .hero {
+            position: relative;
+            text-align: center;
+            color: white;
+            padding: 6rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+            overflow: hidden;
         }
-        .hero-content { max-width: 800px; }
-        .hero h1 { font-size: 2.5rem; color: white; margin-bottom: 1rem; line-height: 1.3; padding: 0 1rem; }
-        .hero p { font-size: 1.15rem; margin-bottom: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto; color: rgba(255,255,255,0.85); }
-        .countdown { display: flex; gap: 1rem; justify-content: center; margin-top: 2rem; }
-        .countdown > div { background-color: rgba(0,0,0,0.2); padding: 1rem; border-radius: var(--radius); min-width: 90px; }
-        .countdown-number { font-size: 2.5rem; font-weight: 700; line-height: 1; color: var(--accent); }
-        .countdown-label { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,0.7); }
-        
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.9)), url('https://animaisueg.free.nf/fundo.svg');
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+            padding: 0 1rem;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .countdown {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .countdown>div {
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 1rem;
+            border-radius: var(--radius);
+            min-width: 90px;
+        }
+
+        .countdown-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1;
+            color: var(--accent);
+        }
+
+        .countdown-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
         @media (max-width: 767px) {
-            .hero-content { padding: 0 1rem; }
-            .hero h1 { font-size: 2rem; padding: 0; }
-            .hero p { padding: 0; }
-            .countdown { flex-wrap: wrap; }
-            .countdown > div { min-width: 70px; padding: 0.75rem; }
-            .countdown-number { font-size: 2rem; }
-            .countdown-label { font-size: 0.75rem; }
+            .hero-content {
+                padding: 0 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+                padding: 0;
+            }
+
+            .hero p {
+                padding: 0;
+            }
+
+            .countdown {
+                flex-wrap: wrap;
+            }
+
+            .countdown>div {
+                min-width: 70px;
+                padding: 0.75rem;
+            }
+
+            .countdown-number {
+                font-size: 2rem;
+            }
+
+            .countdown-label {
+                font-size: 0.75rem;
+            }
         }
 
         @media (min-width: 768px) {
-            .hero h1 { font-size: 3.5rem; }
-            .hero p { font-size: 1.25rem; }
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+
+            .hero p {
+                font-size: 1.25rem;
+            }
         }
 
-        .section-title { text-align: center; margin-bottom: 3rem; font-size: 2.5rem; }
-        .card { background-color: var(--card); border-radius: var(--radius); box-shadow: var(--shadow-sm); transition: transform 0.3s, box-shadow 0.3s; }
-        .card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
-        
-        .schedule { background-color: var(--secondary); }
-        .schedule-filters { display: flex; justify-content: center; gap: 0.5rem; margin-bottom: 2rem; flex-wrap: wrap; }
-        .filter-btn { background-color: white; border: 1px solid var(--border); color: var(--muted-foreground); }
-        .filter-btn.active { background-color: var(--primary); color: var(--primary-foreground); border-color: var(--primary); transform: translateY(-2px); }
-        
-        .schedule-items-container { position: relative; }
-        .schedule-item { background-color: white; padding: 1.5rem; border-radius: var(--radius); margin-bottom: 1rem; border-left: 5px solid var(--accent); transition: opacity 0.4s ease, transform 0.4s ease, max-height 0.5s ease, padding 0.5s ease; overflow: hidden; }
-        .schedule-item.hidden { opacity: 0; transform: scale(0.95); max-height: 0; padding-top: 0; padding-bottom: 0; margin-bottom: 0; border: 0; }
-        .schedule-item header { display: flex; flex-direction: column; gap: 0.25rem; margin-bottom: 0.75rem; }
-        .schedule-item h3 { font-size: 1.2rem; color: var(--primary); }
-        .schedule-time { font-weight: 600; color: var(--accent); }
-        .schedule-item ul { margin-left: 1.5rem; }
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+        }
+
+        .card {
+            background-color: var(--card);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .schedule {
+            background-color: var(--secondary);
+        }
+
+        .schedule-filters {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background-color: white;
+            border: 1px solid var(--border);
+            color: var(--muted-foreground);
+        }
+
+        .filter-btn.active {
+            background-color: var(--primary);
+            color: var(--primary-foreground);
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .schedule-items-container {
+            position: relative;
+        }
+
+        .schedule-item {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            margin-bottom: 1rem;
+            border-left: 5px solid var(--accent);
+            transition: opacity 0.4s ease, transform 0.4s ease, max-height 0.5s ease, padding 0.5s ease;
+            overflow: hidden;
+        }
+
+        .schedule-item.hidden {
+            opacity: 0;
+            transform: scale(0.95);
+            max-height: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+            margin-bottom: 0;
+            border: 0;
+        }
+
+        .schedule-item header {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .schedule-item h3 {
+            font-size: 1.2rem;
+            color: var(--primary);
+        }
+
+        .schedule-time {
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        .schedule-item ul {
+            margin-left: 1.5rem;
+        }
+
         @media (min-width: 768px) {
-            .schedule-item header { flex-direction: row; justify-content: space-between; align-items: center; }
+            .schedule-item header {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
         }
-        
-        .gts { background-color: var(--background); }
-        .gt-card { padding: 1.5rem; margin-bottom: 1rem; }
-        .gt-card h3 { color: var(--primary); margin-bottom: 0.5rem; }
-        .gt-card p { margin-bottom: 0.5rem; }
 
-        .speakers-grid { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
-        .speaker-card { text-align: center; overflow: hidden; }
-        .speaker-card img { width: 100%; height: 280px; object-fit: cover; object-position: top; }
-        .speaker-info { padding: 1.5rem; }
-        .speaker-info h3 { font-size: 1.25rem; }
-        .speaker-info .affiliation { font-size: 0.9rem; font-style: italic; color: var(--muted-foreground); margin-bottom: 1rem; }
-        .speaker-info .talk-title { font-size: 1rem; font-weight: 500; min-height: 3em; margin-bottom: 1.5rem; }
+        .gts {
+            background-color: var(--background);
+        }
 
-        .minicursos { background-color: var(--secondary); }
-        .minicurso-card { padding: 1.5rem; margin-bottom: 1rem; }
-        .minicurso-card h3 { color: var(--primary); margin-bottom: 0.5rem; }
-        
-        .location-grid { display: grid; gap: 2rem; align-items: center; }
-        .location-grid iframe { width: 100%; height: 300px; border: 0; border-radius: var(--radius); }
+        .gt-card {
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .gt-card h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .gt-card p {
+            margin-bottom: 0.5rem;
+        }
+
+        .speakers-grid {
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        }
+
+        .speaker-card {
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .speaker-card img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .speaker-info {
+            padding: 1.5rem;
+        }
+
+        .speaker-info h3 {
+            font-size: 1.25rem;
+        }
+
+        .speaker-info .affiliation {
+            font-size: 0.9rem;
+            font-style: italic;
+            color: var(--muted-foreground);
+            margin-bottom: 1rem;
+        }
+
+        .speaker-info .talk-title {
+            font-size: 1rem;
+            font-weight: 500;
+            min-height: 3em;
+            margin-bottom: 1.5rem;
+        }
+
+        .minicursos {
+            background-color: var(--secondary);
+        }
+
+        .minicurso-card {
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .minicurso-card h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .location-grid {
+            display: grid;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .location-grid iframe {
+            width: 100%;
+            height: 300px;
+            border: 0;
+            border-radius: var(--radius);
+        }
+
         @media (min-width: 768px) {
-            .location-grid { grid-template-columns: 1fr 1fr; }
-            .location-grid iframe { height: 400px; }
+            .location-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .location-grid iframe {
+                height: 400px;
+            }
         }
 
-        .main-footer { background-color: var(--primary); color: var(--primary-foreground); padding: 3rem 0; text-align: center; }
-        .support-logos { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 2rem; margin-bottom: 2rem; }
-        .support-logos img { max-height: 50px; filter: brightness(0) invert(1); opacity: 0.8; transition: opacity 0.3s; }
-        .support-logos img:hover { opacity: 1; }
-        .footer-bottom { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.2); font-size: 0.9rem; opacity: 0.8; }
-        .footer-section p { margin-bottom: 0.5rem; }
-        .footer-section h4 { margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 1px; font-size: 1rem;}
+        .main-footer {
+            background-color: var(--primary);
+            color: var(--primary-foreground);
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .support-logos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .support-logos img {
+            max-height: 50px;
+            filter: brightness(0) invert(1);
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .support-logos img:hover {
+            opacity: 1;
+        }
+
+        .footer-bottom {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .footer-section p {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 1rem;
+        }
 
 
-        .modal { display: none; position: fixed; z-index: 1001; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(15, 23, 42, 0.8); backdrop-filter: blur(5px); animation: fadeIn 0.3s ease; }
-        .modal-content { background-color: var(--background); margin: 5vh auto; padding: 2rem; border-radius: var(--radius); max-width: 700px; width: 90%; position: relative; animation: scaleIn 0.3s ease; box-shadow: var(--shadow-md); max-height: 90vh; overflow-y: auto;}
-        .close-btn { color: #aaa; position: absolute; top: 0.5rem; right: 1rem; font-size: 2rem; font-weight: bold; cursor: pointer; transition: color 0.2s; }
-        .close-btn:hover { color: var(--foreground); }
-        .modal-content h3 { margin-bottom: 1rem; }
-        .modal-content h4 { margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--primary); }
-        .modal-content ul { list-style-position: inside; padding-left: 1rem; }
-        .modal-content li { margin-bottom: 0.5rem; }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1001;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(5px);
+            animation: fadeIn 0.3s ease;
+        }
 
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        @keyframes scaleIn { from { transform: scale(0.9); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+        .modal-content {
+            background-color: var(--background);
+            margin: 5vh auto;
+            padding: 2rem;
+            border-radius: var(--radius);
+            max-width: 700px;
+            width: 90%;
+            position: relative;
+            animation: scaleIn 0.3s ease;
+            box-shadow: var(--shadow-md);
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .close-btn {
+            color: #aaa;
+            position: absolute;
+            top: 0.5rem;
+            right: 1rem;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .close-btn:hover {
+            color: var(--foreground);
+        }
+
+        .modal-content h3 {
+            margin-bottom: 1rem;
+        }
+
+        .modal-content h4 {
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .modal-content ul {
+            list-style-position: inside;
+            padding-left: 1rem;
+        }
+
+        .modal-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                transform: scale(0.9);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
     </style>
 </head>
+
 <body>
     <header class="main-header">
         <div class="container header-content">
@@ -269,7 +750,8 @@
         <section id="hero" class="hero">
             <div class="hero-content animate-on-scroll">
                 <h1>I Seminário de Literaturas Africanas e Afro-brasileira: Ensino e Diversidade</h1>
-                <p>Um espaço de diálogo e reflexão sobre as narrativas que moldam e revelam as conexões culturais entre África e Brasil.</p>
+                <p>Um espaço de diálogo e reflexão sobre as narrativas que moldam e revelam as conexões culturais entre
+                    África e Brasil.</p>
                 <div id="countdown" class="countdown"></div>
             </div>
         </section>
@@ -283,56 +765,95 @@
                     <button class="filter-btn btn" data-filter="dia-04">04.11</button>
                     <button class="filter-btn btn" data-filter="dia-05">05.11</button>
                 </div>
-                
+
                 <div class="schedule-items-container animate-on-scroll">
                     <article class="schedule-item" data-day="dia-03">
-                        <header><h3>Minicurso: Educação antirracista no ensino de linguagens</h3> <span class="schedule-time">14:00 – 17:00</span></header>
-                        <p><strong>Com:</strong> Prof. Ms. Karyelly Guimarães Moreira & Prof.Ms. Carlos Matheus da Silva Mello</p>
+                        <header>
+                            <h3>Minicurso: Educação antirracista no ensino de linguagens</h3> <span
+                                class="schedule-time">14:00 – 17:00</span>
+                        </header>
+                        <p><strong>Com:</strong> Prof. Ms. Karyelly Guimarães Moreira & Prof.Ms. Carlos Matheus da Silva
+                            Mello</p>
                     </article>
                     <article class="schedule-item" data-day="dia-03">
-                        <header><h3>Mesa-redonda 1: Escritores/intelectuais afro- brasileiros</h3> <span class="schedule-time">20:10 – 21:10</span></header>
+                        <header>
+                            <h3>Mesa-redonda 1: Escritores/intelectuais afro- brasileiros</h3> <span
+                                class="schedule-time">20:10 – 21:10</span>
+                        </header>
                         <ul>
-                            <li><strong>Profa. Dra. Sônia Santos (FeMASS):</strong> Escritas Insubmissas: a casa crioula na literatura feminina de Cabo Verde</li>
-                            <li><strong>Prof. Dr. Junior César F. de Castro (UFMT):</strong> A Poética da Ausência e a tradição da Ruptura: do apagamento negro ao movimento da Negritude na poesia lírica brasileira</li>
-                            <li><strong>Moderadora:</strong> Profa. Ms. Karyelly Guimarães Moreira (Doutoranda do IELT-UEG)</li>
+                            <li><strong>Profa. Dra. Sônia Santos (FeMASS):</strong> Escritas Insubmissas: a casa crioula
+                                na literatura feminina de Cabo Verde</li>
+                            <li><strong>Prof. Dr. Junior César F. de Castro (UFMT):</strong> A Poética da Ausência e a
+                                tradição da Ruptura: do apagamento negro ao movimento da Negritude na poesia lírica
+                                brasileira</li>
+                            <li><strong>Moderadora:</strong> Profa. Ms. Karyelly Guimarães Moreira (Doutoranda do
+                                IELT-UEG)</li>
                         </ul>
                     </article>
                     <article class="schedule-item" data-day="dia-03">
-                        <header><h3>Conferência: África e Brasil: linguagens em movimento</h3> <span class="schedule-time">21:30 – 22:10</span></header>
+                        <header>
+                            <h3>Conferência: África e Brasil: linguagens em movimento</h3> <span
+                                class="schedule-time">21:30 – 22:10</span>
+                        </header>
                         <p><strong>Com:</strong> Profa. Dra. Rita Chaves (USP)</p>
                     </article>
-                    
+
                     <article class="schedule-item" data-day="dia-04">
-                        <header><h3>Minicurso: Mulher, cultura e literatura: Interações entre Brasil e Cabo Verde</h3> <span class="schedule-time">14:00 – 17:00</span></header>
+                        <header>
+                            <h3>Minicurso: Mulher, cultura e literatura: Interações entre Brasil e Cabo Verde</h3> <span
+                                class="schedule-time">14:00 – 17:00</span>
+                        </header>
                         <p><strong>Com:</strong> Profa. Dra. Sônia Santos</p>
                     </article>
                     <article class="schedule-item" data-day="dia-04">
-                        <header><h3>Mesa-redonda 2: Ensino de Literaturas Africanas e Afro-brasileira</h3><span class="schedule-time">19:40 – 21:10</span></header>
+                        <header>
+                            <h3>Mesa-redonda 2: Ensino de Literaturas Africanas e Afro-brasileira</h3><span
+                                class="schedule-time">19:40 – 21:10</span>
+                        </header>
                         <ul>
-                            <li><strong>Profª. Drª Norma Sueli Rosa Lima (UERJ-PROFLETRAS):</strong> Literaturas afro-brasileira e cabo-verdiana: ensino e diversidade</li>
-                            <li><strong>Prof. Dr.José Humberto dos Anjos (UFG):</strong> Ensinar e aprender com as literaturas afro-brasileiras</li>
-                            <li><strong>Moderador:</strong> Prof. Dra. Viviane Farias Lopes (UEG-Poslli-Linterfaces)</li>
+                            <li><strong>Profª. Drª Norma Sueli Rosa Lima (UERJ-PROFLETRAS):</strong> Literaturas
+                                afro-brasileira e cabo-verdiana: ensino e diversidade</li>
+                            <li><strong>Prof. Dr.José Humberto dos Anjos (UFG):</strong> Ensinar e aprender com as
+                                literaturas afro-brasileiras</li>
+                            <li><strong>Moderador:</strong> Prof. Dra. Viviane Farias Lopes (UEG-Poslli-Linterfaces)
+                            </li>
                         </ul>
                     </article>
                     <article class="schedule-item" data-day="dia-04">
-                        <header><h3>Conferência: O romance histórico africano (Angola e Moçambique): a relutância da rainha Ginga e do imperador Gungunhana ao sistema-mundo colonial</h3><span class="schedule-time">21:30 – 22:10</span></header>
+                        <header>
+                            <h3>Conferência: O romance histórico africano (Angola e Moçambique): a relutância da rainha
+                                Ginga e do imperador Gungunhana ao sistema-mundo colonial</h3><span
+                                class="schedule-time">21:30 – 22:10</span>
+                        </header>
                         <p><strong>Com:</strong> Prof. Dr. Edvaldo Bergamo (UnB)</p>
                     </article>
-                    
+
                     <article class="schedule-item" data-day="dia-05">
-                        <header><h3>Minicurso: Metrificação e cia.: teoria e prática da versificação</h3> <span class="schedule-time">14:00 – 17:00</span></header>
+                        <header>
+                            <h3>Minicurso: Metrificação e cia.: teoria e prática da versificação</h3> <span
+                                class="schedule-time">14:00 – 17:00</span>
+                        </header>
                         <p><strong>Com:</strong> Prof. Dr. Dirlenvalder Loyolla (UNIFESSPA)</p>
                     </article>
                     <article class="schedule-item" data-day="dia-05">
-                        <header><h3>Mesa-redonda 3: O Processo Criativo de Escritores Afro-brasileiros</h3><span class="schedule-time">20:00 – 21:10</span></header>
+                        <header>
+                            <h3>Mesa-redonda 3: O Processo Criativo de Escritores Afro-brasileiros</h3><span
+                                class="schedule-time">20:00 – 21:10</span>
+                        </header>
                         <ul>
-                             <li><strong>Profa. Dra. Lilian Paula Serra e Deus (UNILAB):</strong> Literatura e escrevivência do(s) trauma(s)</li>
-                             <li><strong>Prof. Dr. Dirlenvalder Loyolla (UNIFESSPA):</strong> A crônica da vida de Lima Barreto e a crônica devida de Carolina Maria de Jesus: entre a crítica e a crise</li>
-                             <li><strong>Moderador:</strong> Prof. Dr. Samuel Carlos Melo (Coordenador do PPG- Poslli-UEG)</li>
+                            <li><strong>Profa. Dra. Lilian Paula Serra e Deus (UNILAB):</strong> Literatura e
+                                escrevivência do(s) trauma(s)</li>
+                            <li><strong>Prof. Dr. Dirlenvalder Loyolla (UNIFESSPA):</strong> A crônica da vida de Lima
+                                Barreto e a crônica devida de Carolina Maria de Jesus: entre a crítica e a crise</li>
+                            <li><strong>Moderador:</strong> Prof. Dr. Samuel Carlos Melo (Coordenador do PPG-
+                                Poslli-UEG)</li>
                         </ul>
                     </article>
                     <article class="schedule-item" data-day="dia-05">
-                        <header><h3>Conferência de Encerramento: Traços e gestos da escrita literária de Conceição Evaristo</h3> <span class="schedule-time">21:20 – 22:00</span></header>
+                        <header>
+                            <h3>Conferência de Encerramento: Traços e gestos da escrita literária de Conceição Evaristo
+                            </h3> <span class="schedule-time">21:20 – 22:00</span>
+                        </header>
                         <p><strong>Com:</strong> Profa. Dra. Maria Nazareth Soares Fonseca (UFMG)</p>
                     </article>
                 </div>
@@ -342,45 +863,174 @@
         <section id="gts" class="gts">
             <div class="container">
                 <h2 class="section-title animate-on-scroll">Grupos de Trabalho (GTs)</h2>
-                 <div class="card gt-card animate-on-scroll">
+                <div class="card gt-card animate-on-scroll">
                     <h3>GT01: Relações Raciais e Direitos Humanos</h3>
                     <p><strong>Coordenadora:</strong> Profa. Ms. Nágila Alves (Doutoranda – UFPI)</p>
-                    <p><strong>Data:</strong> 03.11 | <strong>Horário:</strong> 08:00–11:00 | <strong>Modalidade:</strong> Online</p>
+                    <p><strong>Data:</strong> 03.11 | <strong>Horário:</strong> 08:00–11:00 |
+                        <strong>Modalidade:</strong> Online
+                    </p>
+                    <p><strong>Descrição:</strong></p>
+                    <p>Pessoas negras têm seus direitos sistematicamente negados há séculos, sendo
+                        historicamente alvos de ideologias de dominação e controle que sustentam discursos de
+                        objetificação, desumanização e naturalização das desigualdades sociais e raciais. Essas
+                        práticas estruturais, ainda presentes, banalizam as violações de direitos e perpetuam
+                        estigmas que alimentam um sistema excludente e desigual. Partindo de perspectivas críticas
+                        elaboradas por intelectuais como Lélia Gonzalez (2020), Sueli Carneiro (2018), bell hooks
+                        (2019), Abdias do Nascimento (2016) e Frantz Fanon (2008), este grupo temático compreende
+                        que a defesa dos direitos humanos exige o enfrentamento direto das opressões raciais que
+                        atravessam as estruturas sociais, históricas e culturais, tanto no Brasil quanto no
+                        continente africano e na diáspora. Neste contexto, o simpósio tem como objetivo reunir
+                        pesquisas, reflexões e experiências que discutam o racismo como uma violação contínua dos
+                        direitos fundamentais, articulando-o com os estudos literários, as práticas educacionais e
+                        as demais áreas das ciências humanas. Convidamos trabalhos que explorem, de forma crítica e
+                        interseccional, as relações entre raça, gênero, classe, sexualidade, colonialidade,
+                        decolonialidade e contracolonialidade, promovendo debates comprometidos com a justiça
+                        racial, por meio da literatura, da educação e da valorização de trajetórias historicamente
+                        invisibilizadas.</p>
                 </div>
                 <div class="card gt-card animate-on-scroll">
                     <h3>GT02: Tecendo Vozes Negras: Literatura, Mídias e Educação em Perspectiva Afrocentrada</h3>
-                    <p><strong>Coordenadores:</strong> Karyelly Guimarães Moreira (Doutoranda IELT –UEG) & Carlos Matheus da Silva Mello (Doutorando IELT-UEG)</p>
-                    <p><strong>Data:</strong> 04.11 | <strong>Horário:</strong> 08:00–11:00 | <strong>Modalidade:</strong> Presencial</p>
+                    <p><strong>Coordenadores:</strong> Karyelly Guimarães Moreira (Doutoranda IELT –UEG) & Carlos
+                        Matheus da Silva Mello (Doutorando IELT-UEG)</p>
+                    <p><strong>Data:</strong> 04.11 | <strong>Horário:</strong> 08:00–11:00 |
+                        <strong>Modalidade:</strong> Presencial
+                    </p>
+                    <p><strong>Descrição:</strong></p>
+                    <p>Este GT propõe um espaço de escuta, análise e debate sobre as literaturas africanas e
+                        afro-brasileiras como práticas de reescrita do cânone e afirmação de epistemologias negras no
+                        campo do ensino, da crítica e das mídias contemporâneas. Serão acolhidos trabalhos que explorem
+                        as poéticas afrocentradas em sua relação com ancestralidade, identidade, resistência e
+                        reexistência, tanto nos textos literários quanto nas linguagens midiáticas (digitais,
+                        audiovisuais, performáticas). O GT também se abre à discussão sobre o ensino dessas literaturas
+                        na educação básica e superior, com enfoque na educação antirracista, nas tecnologias decoloniais
+                        e nos enfrentamentos ao racismo estrutural em espaços formativos e comunicacionais.</p>
                 </div>
-                 <div class="card gt-card animate-on-scroll">
+                <div class="card gt-card animate-on-scroll">
                     <h3>GT03: Literatura infantil e juvenil e as relações etnico-raciais</h3>
-                    <p><strong>Coordenadores:</strong> Prof. Dr. José Humberto dos Anjos (UFG) & Lauriana Fogaça Ferreira dos Santos (Mestranda UEG-Poslli)</p>
-                    <p><strong>Data:</strong> 04.11 | <strong>Horário:</strong> 08:00–11:00 | <strong>Modalidade:</strong> Presencial</p>
+                    <p><strong>Coordenadores:</strong> Prof. Dr. José Humberto dos Anjos (UFG) & Lauriana Fogaça
+                        Ferreira dos Santos (Mestranda UEG-Poslli)</p>
+                    <p><strong>Data:</strong> 04.11 | <strong>Horário:</strong> 08:00–11:00 |
+                        <strong>Modalidade:</strong> Presencial
+                    </p>
+                    <p><strong>Descrição:</strong></p>
+                    <p>Esse GT recebe estudos de pesquisadoras e pesquisadores com investigações concluídas ou em
+                        andamento, oriundas de práticas pedagógicas que envolvam a literatura infantil e juvenil e suas
+                        relações éticas, estéticas e políticas com as relações étnico-raciais. O objetivo do GT é reunir
+                        estudos que reflitam sobre a literatura infantil e juvenil na formação leitora, no
+                        desenvolvimento humano e na construção de uma educação comprometida com a diversidade, com
+                        ênfase especial nas literaturas indígena e afro-brasileira. Entendemos a literatura como uma
+                        potente linguagem de humanização, capaz de ampliar horizontes, provocar reflexões e promover o
+                        reconhecimento da pluralidade cultural que compõe a sociedade. Nesse sentido, as obras
+                        literárias voltadas ao público infantil e juvenil desempenham uma função social essencial:
+                        contribuem para a formação de sujeitos críticos, empáticos e conscientes de suas identidades e
+                        das histórias que os constituem. A leitura literária, desde os primeiros anos escolares, atua
+                        como um direito e uma necessidade para o pleno desenvolvimento das crianças, possibilitando a
+                        construção de vínculos afetivos, a valorização das diferenças e o enfrentamento de estereótipos
+                        e preconceitos. Este GT se propõe como espaço de partilha e aprofundamento de experiências,
+                        projetos e pesquisas que compreendem a literatura como campo de luta simbólica e pedagógica,
+                        reafirmando seu papel transformador na sociedade. Esperamos contribuições que nos ajudem a
+                        pensar caminhos para uma educação literária mais justa, diversa e comprometida com os direitos
+                        humanos e a equidade racial.</p>
                 </div>
                 <div class="card gt-card animate-on-scroll">
                     <h3>GT04: Políticas afirmativas</h3>
                     <p><strong>Coordenador:</strong> Prof. Dr. Alexandre Mariotto Botton (Unemat)</p>
-                    <p><strong>Data:</strong> 04.11 | <strong>Horário:</strong> 08:00–11:00 | <strong>Modalidade:</strong> Online</p>
+                    <p><strong>Data:</strong> 04.11 | <strong>Horário:</strong> 08:00–11:00 |
+                        <strong>Modalidade:</strong> Online
+                    </p>
+                    <p><strong>Descrição:</strong></p>
+                    <p>As ações afirmativas no Brasil representam um conjunto de políticas públicas destinadas a
+                        promover a equidade para grupos historicamente marginalizados, como negros, indígenas, mulheres,
+                        pessoas LGBTQIA+ e pessoas com deficiência. Essas políticas têm suas raízes em um contexto de
+                        desigualdades sociais profundas e de luta por justiça social ao longo da história brasileira.
+                        Desde a sua colonização, a história do Brasil foi marcada por desigualdades raciais e sociais
+                        que limitaram e muitas vezes até impediram o acesso de grupos minoritários às oportunidades de
+                        educação, emprego e participação política. A abolição da escravidão em 1888 não foi acompanhada
+                        de políticas de inclusão efetivas, o que aprofundou as disparidades raciais. Segundo Silva, “a
+                        ausência de ações reparatórias no pós-abolição deixou um legado de exclusão racial que se
+                        manifesta até hoje na sociedade brasileira” (2018, p. 45). Na década de 1980, com o
+                        fortalecimento do movimento negro e a redemocratização, começaram a surgir debates sobre a
+                        necessidade de políticas específicas para corrigir essas desigualdades. Como aponta Souza, “a
+                        redemocratização trouxe à tona a discussão sobre a reparação histórica e o papel do Estado na
+                        promoção da igualdade racial” (2015, p. 102). A primeira iniciativa significativa ocorreu em
+                        2003, com a implementação de cotas raciais no sistema de universidades públicas, especialmente
+                        na Universidade de Brasília (UnB), que adotou um sistema de reserva de vagas para estudantes
+                        negros e indígenas. Essa experiência serviu como um marco e impulsionou a expansão da política
+                        de cotas em outras instituições de ensino superior pelo país. Segundo Carvalho, “a adoção das
+                        cotas na UnB foi um momento decisivo para a discussão nacional sobre ações afirmativas na
+                        educação superior” (2011, p. 78). Em 2012, o Brasil avançou com a Lei nº 12.711/2012, conhecida
+                        como Lei de Cotas, que estabeleceu critérios para a reserva de vagas em universidades e
+                        concursos públicos, priorizando estudantes de escolas públicas, negros, indígenas, pessoas com
+                        deficiência e membros de grupos vulneráveis. Segundo Lima, “a Lei de Cotas representou um marco
+                        na política de inclusão social e racial no país, ao estabelecer uma legislação de alcance
+                        nacional” (2014, p. 150). Nos últimos anos, houve debates e ações visando ampliar a efetividade
+                        dessas políticas e garantir que elas não sejam apenas simbólicas, mas que realmente promovam a
+                        transformação social. No entanto, essas ações continuam enfrentando resistência de setores
+                        contrários. Ainda assim, o avanço dessas políticas representa um movimento importante na direção
+                        de uma sociedade mais justa e igualitária. Nesse sentido, o GT Políticas Afirmativas Aceita
+                        trabalhos com a temática das Políticas de Ações Afirmativas, sua evolução no decorrer dá
+                        história brasileira, sua interface com a literatura, sua atualidade, casos de sucesso em
+                        políticas afirmativas e suas tendências na atualidade.</p>
                 </div>
                 <div class="card gt-card animate-on-scroll">
-                    <h3>GT05: Entre o silenciamento e a denúncia: as violências presentes nas narrativas contemporâneas de autoria feminina</h3>
-                    <p><strong>Coordenadores:</strong> Prof. Dr. Celiomar Profírio Ramos (UEA) & Profa. Dra. Marinei Almeida (Unemat)</p>
-                    <p><strong>Data:</strong> 05.11 | <strong>Horário:</strong> 08:00–11:00 | <strong>Modalidade:</strong> Online</p>
+                    <h3>GT05: Entre o silenciamento e a denúncia: as violências presentes nas narrativas contemporâneas
+                        de autoria feminina</h3>
+                    <p><strong>Coordenadores:</strong> Prof. Dr. Celiomar Profírio Ramos (UEA) & Profa. Dra. Marinei
+                        Almeida (Unemat)</p>
+                    <p><strong>Data:</strong> 05.11 | <strong>Horário:</strong> 08:00–11:00 |
+                        <strong>Modalidade:</strong> Online
+                    </p>
+                    <p><strong>Descrição:</strong></p>
+                    As mulheres, por um período considerável da história, foram tratadas como objetos na literatura.
+                    Isso se deve, entre outros fatores, ao fato de que a escrita esteve predominantemente sob o domínio
+                    de homens, em especial, daqueles que representavam a masculinidade hegemônica, ou seja, brancos,
+                    heterossexuais e detentores do capital. Embora nos deparemos com inúmeras tentativas de
+                    silenciamento das mulheres, uma parcela delas, sobretudo as brancas que pertenciam às elites,
+                    conquistaram, num primeiro momento, o direito à leitura e, apesar da resistência de uma sociedade
+                    erguida e sustentada sob a égide do patriarcado, o direito de escrever. Constância Lima Duarte ao
+                    discorrer sobre a literatura afro-brasileira em Gênero e violência na literatura afro-brasileira
+                    (2010), evidencia uma diferenciação entre a produção literárias das autoras brancas e das autoras
+                    negras. A partir do contexto brasileiro, a estudiosa observa que a literatura produzida por mulheres
+                    brancas pouco trazia nos textos as violências às quais as mulheres eram sujeitadas. Quando a
+                    temática se fazia presente, as representações se limitavam às violências simbólicas. Em
+                    contrapartida, quando se tratava da produção literária das autoras afro-brasileiras, pensando
+                    aquelas que publicaram nos Cadernos Negros, Constância aponta que as escritoras em questão
+                    expuseram, sem meandros, as múltiplas violências que as mulheres são vítimas, tais como o
+                    espancamento, o estupro e o aborto, temas que foram sistematicamente negligenciados até então.
+                    Atualmente, ao deparamos com a produção literária brasileira de autoria feminina de escritoras não
+                    racializadas é possível identificar certa mudança, uma das mais evidentes diz respeito a
+                    incorporação de temas antes negligenciados, dentre eles as múltiplas violências para além da
+                    simbólica. Isso ocorre, por exemplo, nos romances de Tatiana Salem Levy Vista Chinesa (2021) e
+                    Melhor não contar (2024), e no romance O peso do pássaro Morto (2017), de Aline Bei. Dado o exposto,
+                    nosso objetivo é reunir trabalhos que discutam sobre representações das violências praticadas contra
+                    as mulheres, brancas e negras, em textos literários de autoria feminina em diferentes gêneros
+                    literários e/ou artísticos adotando, sempre que possível, uma abordagem intereseccional.
                 </div>
-                 <div class="card gt-card animate-on-scroll">
+                <div class="card gt-card animate-on-scroll">
                     <h3>GT06: Branquitude crítica e a literatura</h3>
                     <p><strong>Coordenadora:</strong> Profa. Dra. Ana Colantoni (UFG)</p>
-                    <p><strong>Data:</strong> 05.11 | <strong>Horário:</strong> 14:00–17:00 | <strong>Modalidade:</strong> Online</p>
+                    <p><strong>Data:</strong> 05.11 | <strong>Horário:</strong> 14:00–17:00 |
+                        <strong>Modalidade:</strong> Online
+                    </p>
+                    <p><strong>Descrição:</strong></p>Os estudos de Branquitude Crítica desenvolveram-se no Brasil e no
+                    mundo, principalmente a partir da década de 90, com o intuito de questionar o que seria a norma e o
+                    que seria desvio da norma nos estudos relacionados às questões raciais. A partir dessa problemática,
+                    decidiu-se sobre a necessidade de incluir como objeto de estudo as pessoas que se beneficiam do
+                    racismo e que possuem privilégios na estrutura racial: pessoas brancas. Isso porque tais privilégios
+                    são responsáveis pela perpetuação do racismo e das desigualdades geradas pelo racismo. Esse GT
+                    aceitará trabalhos relacionados a essa temática, principalmente aqueles que explicitam essas
+                    questões a partir de obras literárias.
                 </div>
             </div>
         </section>
-        
+
         <section id="palestrantes">
             <div class="container">
                 <h2 class="section-title animate-on-scroll">Palestrantes</h2>
                 <div class="speakers-grid">
                     <article class="speaker-card card animate-on-scroll">
-                        <img src="https://animaisueg.free.nf/Rita.png" alt="Foto da Profa. Dra. Rita Chaves" loading="lazy">
+                        <img src="https://animaisueg.free.nf/Rita.png" alt="Foto da Profa. Dra. Rita Chaves"
+                            loading="lazy">
                         <div class="speaker-info">
                             <h3>Profa. Dra. Rita Chaves</h3>
                             <p class="affiliation">USP</p>
@@ -389,7 +1039,8 @@
                         </div>
                     </article>
                     <article class="speaker-card card animate-on-scroll" style="transition-delay: 100ms;">
-                        <img src="https://animaisueg.free.nf/Edvaldo.png" alt="Foto do Prof. Dr. Edvaldo Bergamo" loading="lazy">
+                        <img src="https://animaisueg.free.nf/Edvaldo.png" alt="Foto do Prof. Dr. Edvaldo Bergamo"
+                            loading="lazy">
                         <div class="speaker-info">
                             <h3>Prof. Dr. Edvaldo Bergamo</h3>
                             <p class="affiliation">UnB</p>
@@ -398,7 +1049,8 @@
                         </div>
                     </article>
                     <article class="speaker-card card animate-on-scroll" style="transition-delay: 200ms;">
-                        <img src="https://animaisueg.free.nf/Nazareth.png" alt="Foto da Profa. Dra. Maria Nazareth Soares Fonseca" loading="lazy">
+                        <img src="https://animaisueg.free.nf/Nazareth.png"
+                            alt="Foto da Profa. Dra. Maria Nazareth Soares Fonseca" loading="lazy">
                         <div class="speaker-info">
                             <h3>Profa. Dra. Maria Nazareth S. Fonseca</h3>
                             <p class="affiliation">UFMG</p>
@@ -407,7 +1059,8 @@
                         </div>
                     </article>
                     <article class="speaker-card card animate-on-scroll" style="transition-delay: 300ms;">
-                        <img src="https://animaisueg.free.nf/Sonia.jpg" alt="Foto da Profa. Dra. Sônia Santos" loading="lazy">
+                        <img src="https://animaisueg.free.nf/Sonia.jpg" alt="Foto da Profa. Dra. Sônia Santos"
+                            loading="lazy">
                         <div class="speaker-info">
                             <h3>Profa. Dra. Sônia Santos</h3>
                             <p class="affiliation">FeMASS</p>
@@ -418,24 +1071,55 @@
                 </div>
             </div>
         </section>
-        
+
         <section id="minicursos" class="minicursos">
             <div class="container">
                 <h2 class="section-title animate-on-scroll">Minicursos</h2>
                 <div class="card minicurso-card animate-on-scroll">
                     <h3>Educação antirracista no ensino de linguagens</h3>
                     <p><strong>Com:</strong> Karyelly Guimarães Moreira & Carlos Matheus da Silva Mello</p>
-                    <p><strong>Data:</strong> 03.11 | <strong>Horário:</strong> 14:00–17:00 | <strong>Vagas:</strong> 30</p>
+                    <p><strong>Data:</strong> 03.11 | <strong>Horário:</strong> 14:00–17:00 | <strong>Vagas:</strong> 30
+                    </p>
+                    <p><strong>Objetivo Geral: </strong> O minicurso propõe a construção de um percurso didático
+                        voltado à formação de professoras e professores, com foco em práticas de letramento racial
+                        crítico no ensino de linguagens. Fundamentado nos estudos de Ferreira (2004, 2006, 2007,
+                        2009, 2011, 2015), Melo (2015), Mosley (2010), Skerrett (2011), Zancopé e Kadri (2021),
+                        entre outras/os, parte-se da compreensão de que o trabalho com linguagens deve considerar os
+                        atravessamentos políticos, identitários e históricos que constituem as práticas sociais e
+                        discursivas. A partir dessa perspectiva crítica e antirracista, serão mobilizados textos
+                        multimodais, debates, reflexões e produções orais e escritas que articulem teoria e prática
+                        em uma abordagem comprometida com a justiça social. A proposta se organiza com base nos
+                        quatro momentos formativos apresentados por Sabota (2024) – talking topic (tópico de
+                        conversa), expanding repertoires (expansão de repertórios), thinking over (reflexão crítica)
+                        e bringing to life (propostas de vivência) – que se entrelaçam na construção coletiva de
+                        sentidos, ativando os saberes dos sujeitos e tensionando discursos naturalizados. Ao ampliar
+                        repertórios linguísticos, culturais e identitários, o percurso didático promove práticas
+                        pedagógicas que favorecem a escuta sensível, o pensamento crítico e o engajamento com a
+                        diversidade, a equidade e os direitos humanos no ensino de linguagens.</p>
                 </div>
                 <div class="card minicurso-card animate-on-scroll" style="transition-delay: 100ms;">
                     <h3>Mulher, cultura e literatura: Interações entre Brasil e Cabo Verde</h3>
                     <p><strong>Com:</strong> Profa. Dra. Sônia Santos</p>
-                    <p><strong>Data:</strong> 04.11 | <strong>Horário:</strong> 14:00–17:00 | <strong>Vagas:</strong> 30</p>
+                    <p><strong>Data:</strong> 04.11 | <strong>Horário:</strong> 14:00–17:00 | <strong>Vagas:</strong> 30
+                    </p>
+                    <p><strong>Objetivo Geral: </strong> Ver a presença feminina nos espaços públicos e
+                        privados. o olhar voltado para as interferências sociais e políticas que acometem o
+                        universo feminino e são retratadas nos textos escritos por mulheres brasileiras e
+                        caboverdianas.</p>
                 </div>
-                 <div class="card minicurso-card animate-on-scroll" style="transition-delay: 200ms;">
+                <div class="card minicurso-card animate-on-scroll" style="transition-delay: 200ms;">
                     <h3>Metrificação e cia.: teoria e prática da versificação</h3>
                     <p><strong>Com:</strong> Prof. Dr. Dirlenvalder Loyolla (UNIFESSPA)</p>
-                    <p><strong>Data:</strong> 05.11 | <strong>Horário:</strong> 14:00–17:00 | <strong>Vagas:</strong> 30</p>
+                    <p><strong>Data:</strong> 05.11 | <strong>Horário:</strong> 14:00–17:00 | <strong>Vagas:</strong> 30
+                    </p>
+                    <p><strong>Objetivo Geral: </strong>Fornecer conhecimento técnico e conceitual para o estudo de
+                        obras líricas levando em consideração a noção de metro, bem como as potencialidades dos
+                        signos verbais e não-verbais na construção do poema. O foco da atividade desenvolvida foi
+                        nas habilidades EF35LP23 e EF15LP17 da BNCC, as quais têm como objetivo, respectivamente,
+                        “apreciar poemas e outros textos versificados, observando rimas, aliterações e diferentes
+                        modos de divisão dos versos, estrofes e refrões e seu efeito de sentido” e “apreciar poemas
+                        visuais e concretos, observando efeitos de sentido criados pelo formato do texto na página,
+                        distribuição e diagramação das letras, pelas ilustrações e por outros efeitos visuais”.</p>
                 </div>
             </div>
         </section>
@@ -447,15 +1131,15 @@
                     <div class="animate-on-scroll">
                         <h3>UEG — Campus Pires do Rio</h3>
                         <p><strong>Modalidade:</strong> Presencial / Híbrido</p>
-                        <p>Av. Coronel Lino Teixeira de Sampaio, 241 - Bairro São Miguel, Pires do Rio - GO, 75200-000</p>
-                        <p>O evento ocorrerá no auditório principal da Universidade Estadual de Goiás, com estrutura para receber participantes presenciais e transmitir as principais conferências online.</p>
+                        <p>Av. Coronel Lino Teixeira de Sampaio, 241 - Bairro São Miguel, Pires do Rio - GO, 75200-000
+                        </p>
+                        <p>O evento ocorrerá no auditório principal da Universidade Estadual de Goiás, com estrutura
+                            para receber participantes presenciais e transmitir as principais conferências online.</p>
                     </div>
                     <div class="animate-on-scroll" style="transition-delay: 100ms;">
-                        <iframe 
+                        <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3835.856660601551!2d-48.2916986851429!3d-17.29910598816694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94a660f60e9b9c0b%3A0x53a3a413337914e0!2sUniversidade%20Estadual%20de%20Goi%C3%A1s%20-%20Campus%20Pires%20do%20Rio!5e0!3m2!1spt-BR!2sbr!4v1663368291414!5m2!1spt-BR!2sbr"
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade">
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
                     </div>
                 </div>
@@ -465,17 +1149,18 @@
 
     <footer class="main-footer">
         <div class="container">
-             <div class="footer-section">
+            <div class="footer-section">
                 <h4>Apoio e Parcerias</h4>
                 <div class="support-logos">
-                    <img src="https://animaisueg.free.nf/Neabi.png" alt="NEABI - Núcleo de estudos Afro-brasileiros e Indígenas">
+                    <img src="https://animaisueg.free.nf/Neabi.png"
+                        alt="NEABI - Núcleo de estudos Afro-brasileiros e Indígenas">
                     <img src="https://animaisueg.free.nf/afrolic.png" alt="Afrolic">
                     <img src="https://animaisueg.free.nf/Seliafro.png" alt="SELIAFRO">
                 </div>
                 <p>LINTERFACES – Literatura em Interfaces: Transdisciplinaridade e Interculturalidade</p>
                 <p>NEABI – Núcleo de Estudos Afro-Brasileiros e Indígenas – UFG – Câmpus Goiás</p>
                 <p>AFROLIC - Associação Internacional de Estudos Literários e Culturais Africanos</p>
-                 <br>
+                <br>
                 <h4>Apoio Financeiro</h4>
                 <p>FAPEG – Fundação de Amparo à Pesquisa do Estado de Goiás</p>
             </div>
@@ -485,14 +1170,14 @@
                 <p>Universidade Estadual de Goiás – Unidade Universitária de Pires do Rio – Curso de Letras</p>
                 <p>Programa de Pós-Graduação de Língua, Literatura e Interculturalidade – Poslli – UEG</p>
                 <p>Universidade do Estado do Mato Grosso - UNEMAT</p>
-                 <br>
+                <br>
                 <p>I Seminário de Literaturas Africanas e Afro-brasileira</p>
                 <p>Contato: eventoseliafro@gmail.com</p>
                 <p>© 2025 UEG - Campus Pires do Rio. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
-    
+
     <div id="bio-modal" class="modal">
         <div class="modal-content">
             <span class="close-btn" id="close-bio-btn">×</span>
@@ -505,10 +1190,34 @@
             <span class="close-btn" id="close-submission-btn">×</span>
             <div id="submission-content">
                 <h3>Instruções para Inscrição e Submissão</h3>
-                
+                <p>O evento será realizado de <strong>03 a 05 de novembro de 2025</strong>, na <strong>Universidade
+                        Estadual de Goiás (UEG) – Unidade Universitária de Pires do Rio</strong>, reunindo
+                    pesquisadores, estudantes, professores e a comunidade interessada nas interseções entre literatura,
+                    identidade, cultura e cidadania.</p>
+                <p>Com o objetivo de promover o debate crítico sobre o literário, o histórico, o cultural, o social e as
+                    mídias digitais em que haja o protagonismo africano e afro-brasileiro. O I Seliafro propõe um espaço
+                    de reflexão e troca de experiências que envolvem ensino, pesquisa e práticas sociais, valorizando
+                    saberes plurais e perspectivas decoloniais.</p>
+                <p>A programação contará com a realização de conferências; mesas-redondas; apresentações culturais,
+                    simpósios de comunicação oral (GTs); minicursos e exposição e lançamento de livros.</p>
+                <p>Os <strong>minicursos</strong> serão voltados à formação crítica de professores, estudantes e
+                    pesquisadores, com vagas limitadas e certificação mediante inscrição e participação.</p>
+                <p>O evento será realizado em <strong>modalidade híbrida (presencial e online)</strong>, possibilitando
+                    maior acessibilidade e participação de um público diverso.</p>
+                <p><strong>- Carga horária total:</strong> 20 horas</p>
+                <p><strong>- Público-alvo:</strong> estudantes de graduação e pós-graduação, professores da educação
+                    básica e superior, pesquisadores e comunidade em geral.</p>
+                <p><strong>- Certificação: </strong>emitida mediante inscrição e frequência mínima exigida.</p>
+                <p>O <strong>I Seminário de Literaturas Africanas e Afro-brasileira: Ensino e Diversidade
+                    </strong>reafirma o compromisso da UEG em buscar o desenvolvimento institucional por meio de ações
+                    que visam a consolidação da indissociabilidade entre o ensino- pesquisa-extensão, configurada na
+                    realização de eventos. Outrossim, procura valorizar a diversidade, dar visibilidade à produção
+                    acadêmica crítica e o fortalecer o diálogo e a parceria científica quanto às relações entre
+                    literatura, educação e cidadania no Brasil e no continente africano.</p>
                 <h4>1. Modalidades de Submissão</h4>
                 <p><strong>A. Comunicação Oral (Grupos de Trabalho – GTs)</strong></p>
-                <p>As propostas devem estar vinculadas a um dos GTs aprovados pelo evento. Cada proposta deve conter:</p>
+                <p>As propostas devem estar vinculadas a um dos GTs aprovados pelo evento. Cada proposta deve conter:
+                </p>
                 <ul>
                     <li>Título da comunicação</li>
                     <li>Resumo expandido (entre 300 e 500 palavras), com:
@@ -520,7 +1229,7 @@
                             <li>Resultados esperados ou em andamento</li>
                         </ul>
                     </li>
-                     <li>De 3 a 5 palavras-chave</li>
+                    <li>De 3 a 5 palavras-chave</li>
                     <li>Nome completo do(a) autor(a) e coautor(a), se houver</li>
                     <li>Instituição de vínculo e titulação</li>
                     <li>E-mail de contato</li>
@@ -542,7 +1251,8 @@
                     <li>Professor da Educação Básica: R$ 40,00</li>
                     <li>Professor do Ensino Superior: R$ 50,00</li>
                 </ul>
-                <p><em>Obs: Alunos de pós-graduação e graduação com carência comprovada (CadÚnico) podem solicitar isenção da taxa via email: seliafro@ueg.br até 30.09.</em></p>
+                <p><em>Obs: Alunos de pós-graduação e graduação com carência comprovada (CadÚnico) podem solicitar
+                        isenção da taxa via email: seliafro@ueg.br até 30.09.</em></p>
 
                 <h4>4. Dados Bancários para Pagamento</h4>
                 <p>
@@ -553,13 +1263,15 @@
                     <strong>Chave PIX:</strong> seliafro@ueg.br
                 </p>
 
-                <a href="https://www.even3.com.br/i-seminario-de-literaturas-africanas-e-afro-brasileira-ensino-pesquisa-e-cidadania-625801" target="_blank" class="btn btn-primary" style="margin-top: 1.5rem; width: 100%; text-align: center;">
+                <a href="https://www.even3.com.br/i-seminario-de-literaturas-africanas-e-afro-brasileira-ensino-pesquisa-e-cidadania-625801"
+                    target="_blank" class="btn btn-primary"
+                    style="margin-top: 1.5rem; width: 100%; text-align: center;">
                     Realizar Inscrição no Even3
                 </a>
             </div>
         </div>
     </div>
-    
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
 
@@ -569,12 +1281,12 @@
                 hamburger.classList.toggle('active');
                 nav.classList.toggle('active');
             });
-            
+
             // --- Modal de Biografias ---
             const bioModal = document.getElementById('bio-modal');
             const bioBtns = document.querySelectorAll('.bio-btn');
             const closeBioBtn = document.getElementById('close-bio-btn');
-            
+
             const bios = {
                 'rita-chaves': { name: 'Profa. Dra. Rita Chaves', bio: 'Professora titular de Literaturas Africanas de Língua Portuguesa na Universidade de São Paulo (USP). É uma das maiores especialistas do Brasil na área, com vasta publicação de livros e artigos sobre autores como Mia Couto e Paulina Chiziane.' },
                 'edvaldo-bergamo': { name: 'Prof. Dr. Edvaldo Bergamo', bio: 'Professor da Universidade de Brasília (UnB), com pesquisas voltadas para a teoria literária, literatura comparada e estudos pós-coloniais. Seus trabalhos abordam a representação do colonialismo e suas heranças na literatura.' },
@@ -630,7 +1342,7 @@
                     filterBtns.forEach(b => b.classList.remove('active'));
                     e.currentTarget.classList.add('active');
                     const filter = e.currentTarget.dataset.filter;
-                    
+
                     scheduleItems.forEach(item => {
                         const dayMatch = filter === 'all' || item.dataset.day === filter;
                         if (dayMatch) {
@@ -658,7 +1370,7 @@
                 const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                
+
                 countdownElement.innerHTML = `
                     <div><div class="countdown-number">${String(days).padStart(2, '0')}</div><div class="countdown-label">Dias</div></div>
                     <div><div class="countdown-number">${String(hours).padStart(2, '0')}</div><div class="countdown-label">Horas</div></div>
@@ -668,7 +1380,7 @@
             };
             const countdownInterval = setInterval(updateCountdown, 1000);
             updateCountdown();
-            
+
             // --- Animações ao Rolar (Intersection Observer) ---
             const animatedElements = document.querySelectorAll('.animate-on-scroll');
             const observer = new IntersectionObserver((entries) => {
@@ -685,4 +1397,5 @@
         });
     </script>
 </body>
+
 </html>
