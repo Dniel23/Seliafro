@@ -141,13 +141,12 @@
             border-bottom: 1px solid var(--border);
             overflow: hidden;
             max-height: 0;
-            transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+            transition: max-height 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), padding 0.5s ease-in-out;
             padding: 0;
         }
 
         .main-nav.active {
-            max-height: 500px;
-            /* Adjust as needed */
+            max-height: 500px; /* Adjust as needed */
             padding: 1rem 0;
         }
 
@@ -306,7 +305,7 @@
             content: '';
             position: absolute;
             inset: 0;
-            background-image: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.9)), url('https://animaisueg.free.nf/fundo.svg');
+            background-image: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.9)), url('//animaisueg.free.nf/fundo.svg');
             background-size: cover;
             background-position: center;
             z-index: -1;
@@ -653,7 +652,7 @@
             background-color: rgba(15, 23, 42, 0.8);
             backdrop-filter: blur(5px);
         }
-
+        
         .modal.active {
             animation: fadeIn 0.3s ease;
         }
@@ -674,9 +673,9 @@
             max-height: 90vh;
             overflow-y: auto;
         }
-
+        
         .modal.active .modal-content {
-            animation: scaleIn 0.3s ease;
+           animation: scaleIn 0.3s ease;
         }
 
         .modal.closing .modal-content {
@@ -719,47 +718,23 @@
         }
 
         @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
 
         @keyframes fadeOut {
-            from {
-                opacity: 1;
-            }
-
-            to {
-                opacity: 0;
-            }
+            from { opacity: 1; }
+            to { opacity: 0; }
         }
 
         @keyframes scaleIn {
-            from {
-                transform: scale(0.9);
-                opacity: 0;
-            }
-
-            to {
-                transform: scale(1);
-                opacity: 1;
-            }
+            from { transform: scale(0.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
         }
 
         @keyframes scaleOut {
-            from {
-                transform: scale(1);
-                opacity: 1;
-            }
-
-            to {
-                transform: scale(0.9);
-                opacity: 0;
-            }
+            from { transform: scale(1); opacity: 1; }
+            to { transform: scale(0.9); opacity: 0; }
         }
     </style>
 </head>
@@ -768,7 +743,7 @@
     <header class="main-header">
         <div class="container header-content">
             <a href="#" class="logo-container">
-                <img src="https://animaisueg.free.nf/logoueg.png" alt="Logo UEG">
+                <img src="//animaisueg.free.nf/logoueg.png" alt="Logo UEG">
                 <div class="event-title-header">
                     <h1>I Seminário de Literaturas...</h1>
                     <p>03.11 a 05.11 | UEG Pires do Rio</p>
@@ -814,6 +789,13 @@
                 <div class="schedule-items-container animate-on-scroll">
                     <article class="schedule-item" data-day="dia-03">
                         <header>
+                            <h3>GT01: Relações Raciais e Direitos Humanos (Online)</h3> <span
+                                class="schedule-time">08:00 – 11:00</span>
+                        </header>
+                        <p><strong>Coordenadora:</strong> Profa. Ms. Nágila Alves (Doutoranda – UFPI)</p>
+                    </article>
+                    <article class="schedule-item" data-day="dia-03">
+                        <header>
                             <h3>Minicurso: Educação antirracista no ensino de linguagens</h3> <span
                                 class="schedule-time">14:00 – 17:00</span>
                         </header>
@@ -845,6 +827,16 @@
 
                     <article class="schedule-item" data-day="dia-04">
                         <header>
+                            <h3>GT02, GT03 e GT04 (Manhã)</h3> <span class="schedule-time">08:00 – 11:00</span>
+                        </header>
+                         <ul>
+                            <li><strong>GT02:</strong> Tecendo Vozes Negras: Literatura, Mídias e Educação em Perspectiva Afrocentrada (Presencial)</li>
+                            <li><strong>GT03:</strong> Literatura infantil e juvenil e as relações etnico-raciais (Presencial)</li>
+                            <li><strong>GT04:</strong> Políticas afirmativas (Online)</li>
+                        </ul>
+                    </article>
+                    <article class="schedule-item" data-day="dia-04">
+                        <header>
                             <h3>Minicurso: Mulher, cultura e literatura: Interações entre Brasil e Cabo Verde</h3> <span
                                 class="schedule-time">14:00 – 17:00</span>
                         </header>
@@ -873,6 +865,19 @@
                         <p><strong>Com:</strong> Prof. Dr. Edvaldo Bergamo (UnB)</p>
                     </article>
 
+                    <article class="schedule-item" data-day="dia-05">
+                        <header>
+                            <h3>GT05: Entre o silenciamento e a denúncia... (Online)</h3> <span class="schedule-time">08:00 – 11:00</span>
+                        </header>
+                         <p><strong>Coordenadores:</strong> Prof. Dr. Celiomar Profírio Ramos (UEA) & Profa. Dra. Marinei
+                                Almeida (Unemat)</p>
+                    </article>
+                     <article class="schedule-item" data-day="dia-05">
+                        <header>
+                            <h3>GT06: Branquitude crítica e a literatura (Online)</h3> <span class="schedule-time">14:00 – 17:00</span>
+                        </header>
+                         <p><strong>Coordenadora:</strong> Profa. Dra. Ana Colantoni (UFG)</p>
+                    </article>
                     <article class="schedule-item" data-day="dia-05">
                         <header>
                             <h3>Minicurso: Metrificação e cia.: teoria e prática da versificação</h3> <span
@@ -1074,7 +1079,7 @@
                 <h2 class="section-title animate-on-scroll">Palestrantes e Moderadores</h2>
                 <div class="speakers-grid">
                     <article class="speaker-card card animate-on-scroll">
-                        <img src="https://animaisueg.free.nf/Rita.png" alt="Foto da Profa. Dra. Rita Chaves"
+                        <img src="//animaisueg.free.nf/Rita.png" alt="Foto da Profa. Dra. Rita Chaves"
                             loading="lazy">
                         <div class="speaker-info">
                             <h3>Profª. Dra. Rita Chaves</h3>
@@ -1084,7 +1089,7 @@
                         </div>
                     </article>
                     <article class="speaker-card card animate-on-scroll" style="transition-delay: 100ms;">
-                        <img src="https://animaisueg.free.nf/Edvaldo.png" alt="Foto do Prof. Dr. Edvaldo Bergamo"
+                        <img src="//animaisueg.free.nf/Edvaldo.png" alt="Foto do Prof. Dr. Edvaldo Bergamo"
                             loading="lazy">
                         <div class="speaker-info">
                             <h3>Prof. Dr. Edvaldo Bergamo</h3>
@@ -1094,7 +1099,7 @@
                         </div>
                     </article>
                     <article class="speaker-card card animate-on-scroll" style="transition-delay: 200ms;">
-                        <img src="https://animaisueg.free.nf/Nazareth.png"
+                        <img src="//animaisueg.free.nf/Nazareth.png"
                             alt="Foto da Profa. Dra. Maria Nazareth Soares Fonseca" loading="lazy">
                         <div class="speaker-info">
                             <h3>Profª. Dra. Maria Nazareth S. Fonseca</h3>
@@ -1104,7 +1109,7 @@
                         </div>
                     </article>
                     <article class="speaker-card card animate-on-scroll" style="transition-delay: 300ms;">
-                        <img src="https://animaisueg.free.nf/Sonia.jpg" alt="Foto da Profa. Dra. Sônia Santos"
+                        <img src="//animaisueg.free.nf/Sonia.jpg" alt="Foto da Profa. Dra. Sônia Santos"
                             loading="lazy">
                         <div class="speaker-info">
                             <h3>Profª. Dra. Sônia Santos</h3>
@@ -1114,7 +1119,7 @@
                         </div>
                     </article>
                     <article class="speaker-card card animate-on-scroll" style="transition-delay: 300ms;">
-                        <img src="https://animaisueg.free.nf/juniorcesar.png"
+                        <img src="//animaisueg.free.nf/juniorcesar.png"
                             alt="Foto do Prof Junior César F. de Castro" loading="lazy">
                         <div class="speaker-info">
                             <h3>Prof. Dr. Junior César F. de Castro </h3>
@@ -1124,7 +1129,7 @@
                         </div>
                     </article>
                     <article class="speaker-card card animate-on-scroll" style="transition-delay: 300ms;">
-                        <img src="https://animaisueg.free.nf/josehumberto.png"
+                        <img src="//animaisueg.free.nf/josehumberto.png"
                             alt="Foto do Prof Junior César F. de Castro" loading="lazy">
                         <div class="speaker-info">
                             <h3>Prof. Dr.José Humberto dos Anjos </h3>
@@ -1134,7 +1139,7 @@
                         </div>
                     </article>
                     <article class="speaker-card card animate-on-scroll" style="transition-delay: 300ms;">
-                        <img src="https://animaisueg.free.nf/normalima.jpg"
+                        <img src="//animaisueg.free.nf/normalima.jpg"
                             alt="Foto da Profª. Drª Norma Sueli Rosa Lima" loading="lazy">
                         <div class="speaker-info">
                             <h3>Profª. Drª Norma Sueli Rosa Lima </h3>
@@ -1144,17 +1149,17 @@
                         </div>
                     </article>
                     <article class="speaker-card card animate-on-scroll" style="transition-delay: 300ms;">
-                        <img src="https://animaisueg.free.nf/Dirlen.png" alt="Foto do Prof. Dr. Dirlenvalder Loyolla"
+                        <img src="//animaisueg.free.nf/Dirlen.png" alt="Foto do Prof. Dr. Dirlenvalder Loyolla"
                             loading="lazy">
                         <div class="speaker-info">
                             <h3>Prof. Dr. Dirlenvalder Loyolla </h3>
                             <p class="affiliation">UNIFESSPA</p>
-                            <p class="talk-title">Mesa-Redonda - Moderador</p>
+                            <p class="talk-title">Minicurso e Mesa-Redonda</p>
                             <button class="btn btn-outline bio-btn" data-speaker="dirlenvalder">Ver Bio</button>
                         </div>
                     </article>
                     <article class="speaker-card card animate-on-scroll" style="transition-delay: 300ms;">
-                        <img src="https://animaisueg.free.nf/lilianpaula.png"
+                        <img src="//animaisueg.free.nf/lilianpaula.png"
                             alt="Foto da Profa. Dra. Lilian Paula Serra e Deus" loading="lazy">
                         <div class="speaker-info">
                             <h3>Profª. Dra. Lilian Paula Serra e Deus </h3>
@@ -1164,7 +1169,7 @@
                         </div>
                     </article>
                     <article class="speaker-card card animate-on-scroll" style="transition-delay: 300ms;">
-                        <img src="https://animaisueg.free.nf/samuelcarlos.jpg"
+                        <img src="//animaisueg.free.nf/samuelcarlos.jpg"
                             alt="Foto do Prof. Dr. Samuel Carlos Melo" loading="lazy">
                         <div class="speaker-info">
                             <h3>Prof. Dr. Samuel Carlos Melo </h3>
@@ -1174,7 +1179,7 @@
                         </div>
                     </article>
                     <article class="speaker-card card animate-on-scroll" style="transition-delay: 300ms;">
-                        <img src="https://animaisueg.free.nf/vivianefarias.jpg"
+                        <img src="//animaisueg.free.nf/vivianefarias.jpg"
                             alt="Foto da Prof. Dra. Viviane Farias Lopes" loading="lazy">
                         <div class="speaker-info">
                             <h3>Profª. Dra. Viviane Farias Lopes </h3>
@@ -1184,7 +1189,7 @@
                         </div>
                     </article>
                     <article class="speaker-card card animate-on-scroll" style="transition-delay: 300ms;">
-                        <img src="https://animaisueg.free.nf/Karyelly.png"
+                        <img src="//animaisueg.free.nf/Karyelly.png"
                             alt="Foto da Profa. Ms. Karyelly Guimarães Moreira" loading="lazy">
                         <div class="speaker-info">
                             <h3>Profª. Ms. Karyelly Guimarães Moreira </h3>
@@ -1194,12 +1199,12 @@
                         </div>
                     </article>
                     <article class="speaker-card card animate-on-scroll" style="transition-delay: 300ms;">
-                        <img src="https://animaisueg.free.nf/carlosmatheus.png"
+                        <img src="//animaisueg.free.nf/carlosmatheus.png"
                             alt="Foto do Prof.Ms. Carlos Matheus da Silva Mello" loading="lazy">
                         <div class="speaker-info">
                             <h3>Prof.Ms. Carlos Matheus da Silva Mello </h3>
                             <p class="affiliation">IELT-UEG</p>
-                            <p class="talk-title">Minicurso e Mesa Redonda</p>
+                            <p class="talk-title">Minicurso e GT</p>
                             <button class="btn btn-outline bio-btn" data-speaker="carlosmatheus">Ver Bio</button>
                         </div>
                     </article>
@@ -1274,7 +1279,7 @@
                     </div>
                     <div class="animate-on-scroll" style="transition-delay: 100ms;">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3835.856660601551!2d-48.2916986851429!3d-17.29910598816694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94a660f60e9b9c0b%3A0x53a3a413337914e0!2sUniversidade%20Estadual%20de%20Goi%C3%A1s%20-%20Campus%20Pires%20do%20Rio!5e0!3m2!1spt-BR!2sbr!4v1663368291414!5m2!1spt-BR!2sbr"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3813.131109441113!2d-48.28699868882894!3d-17.29294528352554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94a61907d3b07555%3A0x13a85439853a6a11!2sUniversidade%20Estadual%20de%20Goi%C3%A1s%20-%20C%C3%A2mpus%20Pires%20do%20Rio!5e0!3m2!1spt-BR!2sbr!4v1726859349079!5m2!1spt-BR!2sbr"
                             allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
                     </div>
@@ -1288,10 +1293,10 @@
             <div class="footer-section">
                 <h4>Apoio e Parcerias</h4>
                 <div class="support-logos">
-                    <img src="https://animaisueg.free.nf/Neabi.png"
+                    <img src="//animaisueg.free.nf/Neabi.png"
                         alt="NEABI - Núcleo de estudos Afro-brasileiros e Indígenas">
-                    <img src="https://animaisueg.free.nf/afrolic.png" alt="Afrolic">
-                    <img src="https://animaisueg.free.nf/Seliafro.png" alt="SELIAFRO">
+                    <img src="//animaisueg.free.nf/afrolic.png" alt="Afrolic">
+                    <img src="//animaisueg.free.nf/Seliafro.png" alt="SELIAFRO">
                 </div>
                 <p>LINTERFACES – Literatura em Interfaces: Transdisciplinaridade e Interculturalidade</p>
                 <p>NEABI – Núcleo de Estudos Afro-Brasileiros e Indígenas – UFG – Câmpus Goiás</p>
@@ -1388,7 +1393,7 @@
                     <li>Professor do Ensino Superior: R$ 50,00</li>
                 </ul>
                 <p><em>Obs: Alunos de pós-graduação e graduação com carência comprovada (CadÚnico) podem solicitar
-                        isenção da taxa via email: seliafro@ueg.br até 30.09.</em></p>
+                        isenção da taxa via email: seliafro@ueg.br até o dia 30.09.</em></p>
 
                 <h4>4. Dados Bancários para Pagamento</h4>
                 <p>
@@ -1431,10 +1436,34 @@
                 });
             });
 
+            // --- Modal Handling ---
+            const modals = document.querySelectorAll('.modal');
+            
+            const openModal = (modal) => {
+                modal.style.display = 'block';
+                setTimeout(() => modal.classList.add('active'), 10);
+            };
+            
+            const closeModal = (modal) => {
+                modal.classList.add('closing');
+                modal.classList.remove('active');
+                setTimeout(() => {
+                    modal.style.display = 'none';
+                    modal.classList.remove('closing');
+                }, 300); // Animation duration
+            };
+
+            modals.forEach(modal => {
+                const closeBtn = modal.querySelector('.close-btn');
+                if(closeBtn) {
+                    closeBtn.addEventListener('click', () => closeModal(modal));
+                }
+            });
+
             // --- Modal de Biografias ---
             const bioModal = document.getElementById('bio-modal');
             const bioBtns = document.querySelectorAll('.bio-btn');
-            const closeBioBtn = document.getElementById('close-bio-btn');
+            const bioContent = document.getElementById('bio-content');
 
             const bios = {
                 'rita-chaves': { name: 'Profª. Dra. Rita Chaves', bio: 'Professora titular de Literaturas Africanas de Língua Portuguesa na Universidade de São Paulo (USP). É uma das maiores especialistas do Brasil na área, com vasta publicação de livros e artigos sobre autores como Mia Couto e Paulina Chiziane.' },
@@ -1451,60 +1480,40 @@
                 'karyelly': { name: 'Profª. Ms. Karyelly Guimarães Moreira', bio: 'Mestra e doutoranda pela Universidade Estadual de Goiás. Descreve-se como "Mulher, negra, cristã e pessoa em constantes (des/re)construções". Iniciou sua paixão pela docência em um projeto onde lecionou por dois anos e, posteriormente, atuou por mais de três anos no Ensino Médio.' },
                 'carlosmatheus': { name: 'Prof. Ms. Carlos Matheus da Silva Mello', bio: 'Mestrando em Linguagens e Práticas Sociais pelo PPG-IELT (UEG/CSEH), com graduação em Letras Português/Inglês pela mesma instituição. É bolsista da CAPES e membro do grupo de pesquisa "Integra - Perspectivas Críticas em Educação Linguística e Letramentos". Suas pesquisas são na área de educação linguística, com ênfase em educação linguística crítica, decolonialidade, letramento visual crítico e letramentos antirracistas.' },
             };
-
-            const openModal = (modal, content) => {
-                modal.style.display = 'block';
-                modal.querySelector('.modal-content').innerHTML = content;
-                setTimeout(() => modal.classList.add('active'), 10);
-            };
-
-            const closeModal = (modal) => {
-                modal.classList.add('closing');
-                modal.classList.remove('active');
-                setTimeout(() => {
-                    modal.style.display = 'none';
-                    modal.classList.remove('closing');
-                }, 300); // Animation duration
-            };
-
+            
             bioBtns.forEach(btn => {
                 btn.addEventListener('click', (e) => {
                     const speakerKey = e.currentTarget.dataset.speaker;
                     const speakerData = bios[speakerKey];
                     if (speakerData) {
-                        const content = `<span class="close-btn" id="close-bio-btn-inner">×</span><h3>${speakerData.name}</h3><p>${speakerData.bio}</p>`;
-                        openModal(bioModal, content);
-                        document.getElementById('close-bio-btn-inner').addEventListener('click', () => closeModal(bioModal));
+                        bioContent.innerHTML = `<h3>${speakerData.name}</h3><p>${speakerData.bio}</p>`;
+                        openModal(bioModal);
                     }
                 });
             });
 
-            closeBioBtn.addEventListener('click', () => closeModal(bioModal));
-
             // --- Modal de Inscrições ---
             const submissionModal = document.getElementById('submission-modal');
             const submissionBtns = document.querySelectorAll('.submission-btn');
-            const closeSubmissionBtn = document.getElementById('close-submission-btn');
-
+            
             submissionBtns.forEach(btn => {
                 btn.addEventListener('click', () => {
-                    submissionModal.style.display = 'block';
-                    setTimeout(() => submissionModal.classList.add('active'), 10);
+                    openModal(submissionModal);
                 });
             });
 
-            closeSubmissionBtn.addEventListener('click', () => closeModal(submissionModal));
-
             // Fechar modais clicando fora ou com a tecla Esc
             window.addEventListener('click', (event) => {
-                if (event.target == bioModal) closeModal(bioModal);
-                if (event.target == submissionModal) closeModal(submissionModal);
+                if (event.target.classList.contains('modal')) {
+                    closeModal(event.target);
+                }
             });
-
+            
             window.addEventListener('keydown', (event) => {
                 if (event.key === 'Escape') {
-                    if (bioModal.style.display === 'block') closeModal(bioModal);
-                    if (submissionModal.style.display === 'block') closeModal(submissionModal);
+                    modals.forEach(modal => {
+                        if(modal.style.display === 'block') closeModal(modal);
+                    });
                 }
             });
 
@@ -1546,11 +1555,11 @@
                 const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
                 countdownElement.innerHTML = `
-                <div><div class="countdown-number">${String(days).padStart(2, '0')}</div><div class="countdown-label">Dias</div></div>
-                <div><div class="countdown-number">${String(hours).padStart(2, '0')}</div><div class="countdown-label">Horas</div></div>
-                <div><div class="countdown-number">${String(minutes).padStart(2, '0')}</div><div class="countdown-label">Minutos</div></div>
-                <div><div class="countdown-number">${String(seconds).padStart(2, '0')}</div><div class="countdown-label">Segundos</div></div>
-            `;
+                    <div><div class="countdown-number">${String(days).padStart(2, '0')}</div><div class="countdown-label">Dias</div></div>
+                    <div><div class="countdown-number">${String(hours).padStart(2, '0')}</div><div class="countdown-label">Horas</div></div>
+                    <div><div class="countdown-number">${String(minutes).padStart(2, '0')}</div><div class="countdown-label">Minutos</div></div>
+                    <div><div class="countdown-number">${String(seconds).padStart(2, '0')}</div><div class="countdown-label">Segundos</div></div>
+                `;
             };
             const countdownInterval = setInterval(updateCountdown, 1000);
             updateCountdown();
