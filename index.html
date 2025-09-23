@@ -146,7 +146,8 @@
         }
 
         .main-nav.active {
-            max-height: 500px; /* Adjust as needed */
+            max-height: 500px;
+            /* Adjust as needed */
             padding: 1rem 0;
         }
 
@@ -652,7 +653,7 @@
             background-color: rgba(15, 23, 42, 0.8);
             backdrop-filter: blur(5px);
         }
-        
+
         .modal.active {
             animation: fadeIn 0.3s ease;
         }
@@ -673,9 +674,9 @@
             max-height: 90vh;
             overflow-y: auto;
         }
-        
+
         .modal.active .modal-content {
-           animation: scaleIn 0.3s ease;
+            animation: scaleIn 0.3s ease;
         }
 
         .modal.closing .modal-content {
@@ -718,23 +719,47 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
 
         @keyframes fadeOut {
-            from { opacity: 1; }
-            to { opacity: 0; }
+            from {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+            }
         }
 
         @keyframes scaleIn {
-            from { transform: scale(0.9); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
+            from {
+                transform: scale(0.9);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
         }
 
         @keyframes scaleOut {
-            from { transform: scale(1); opacity: 1; }
-            to { transform: scale(0.9); opacity: 0; }
+            from {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            to {
+                transform: scale(0.9);
+                opacity: 0;
+            }
         }
     </style>
 </head>
@@ -829,9 +854,11 @@
                         <header>
                             <h3>GT02, GT03 e GT04 (Manhã)</h3> <span class="schedule-time">08:00 – 11:00</span>
                         </header>
-                         <ul>
-                            <li><strong>GT02:</strong> Tecendo Vozes Negras: Literatura, Mídias e Educação em Perspectiva Afrocentrada (Presencial)</li>
-                            <li><strong>GT03:</strong> Literatura infantil e juvenil e as relações etnico-raciais (Presencial)</li>
+                        <ul>
+                            <li><strong>GT02:</strong> Tecendo Vozes Negras: Literatura, Mídias e Educação em
+                                Perspectiva Afrocentrada (Presencial)</li>
+                            <li><strong>GT03:</strong> Literatura infantil e juvenil e as relações etnico-raciais
+                                (Presencial)</li>
                             <li><strong>GT04:</strong> Políticas afirmativas (Online)</li>
                         </ul>
                     </article>
@@ -852,7 +879,7 @@
                                 afro-brasileira e cabo-verdiana: ensino e diversidade</li>
                             <li><strong>Prof. Dr.José Humberto dos Anjos (UFG):</strong> Ensinar e aprender com as
                                 literaturas afro-brasileiras</li>
-                            <li><strong>Moderador:</strong> Prof. Dra. Viviane Farias Lopes (UEG-Poslli-Linterfaces)
+                            <li><strong>Moderadora:</strong> Prof. Dra. Viviane Farias Lopes (UEG-Poslli-Linterfaces)
                             </li>
                         </ul>
                     </article>
@@ -867,16 +894,18 @@
 
                     <article class="schedule-item" data-day="dia-05">
                         <header>
-                            <h3>GT05: Entre o silenciamento e a denúncia... (Online)</h3> <span class="schedule-time">08:00 – 11:00</span>
+                            <h3>GT05: Entre o silenciamento e a denúncia... (Online)</h3> <span
+                                class="schedule-time">08:00 – 11:00</span>
                         </header>
-                         <p><strong>Coordenadores:</strong> Prof. Dr. Celiomar Profírio Ramos (UEA) & Profa. Dra. Marinei
-                                Almeida (Unemat)</p>
+                        <p><strong>Coordenadores:</strong> Prof. Dr. Celiomar Profírio Ramos (UEA) & Profa. Dra. Marinei
+                            Almeida (Unemat)</p>
                     </article>
-                     <article class="schedule-item" data-day="dia-05">
+                    <article class="schedule-item" data-day="dia-05">
                         <header>
-                            <h3>GT06: Branquitude crítica e a literatura (Online)</h3> <span class="schedule-time">14:00 – 17:00</span>
+                            <h3>GT06: Branquitude crítica e a literatura (Online)</h3> <span class="schedule-time">14:00
+                                – 17:00</span>
                         </header>
-                         <p><strong>Coordenadora:</strong> Profa. Dra. Ana Colantoni (UFG)</p>
+                        <p><strong>Coordenadora:</strong> Profa. Dra. Ana Colantoni (UFG)</p>
                     </article>
                     <article class="schedule-item" data-day="dia-05">
                         <header>
@@ -913,6 +942,94 @@
         <section id="gts" class="gts">
             <div class="container">
                 <h2 class="section-title animate-on-scroll">Grupos de Trabalho (GTs)</h2>
+
+                <div class="speakers-grid">
+                    <article class="speaker-card card animate-on-scroll">
+                        <img src="//animaisueg.free.nf/nagila.png" alt="Foto da Profa. Ms. Nágila Alves" loading="lazy">
+                        <div class="speaker-info">
+                            <h3>Profª. Ms. Nágila Alves</h3>
+                            <p class="affiliation">Doutoranda – UFPI</p>
+                            <p class="talk-title" style="min-height: 3em;">Coordenadora do GT01</p>
+                            <button class="btn btn-outline bio-btn" data-speaker="nagila-alves">Ver Bio</button>
+                        </div>
+                    </article>
+                    <article class="speaker-card card animate-on-scroll" style="transition-delay: 100ms;">
+                        <img src="//animaisueg.free.nf/nismaria.jpg" alt="Foto de Lauriana Fogaça Ferreira dos Santos"
+                            loading="lazy">
+                        <div class="speaker-info">
+                            <h3>Profª. Dra. Nismária Alves David</h3>
+                            <p class="affiliation">UEG/Poslli</p>
+                            <p class="talk-title" style="min-height: 3em;">Coordenadora do GT03</p>
+                            <button class="btn btn-outline bio-btn" data-speaker="nismaria">Ver Bio</button>
+                        </div>
+                    </article>
+                    <article class="speaker-card card animate-on-scroll" style="transition-delay: 100ms;">
+                        <img src="//animaisueg.free.nf/jane.jpg" alt="Foto de Lauriana Fogaça Ferreira dos Santos"
+                            loading="lazy">
+                        <div class="speaker-info">
+                            <h3>Profª. Dra. Jane Gandra</h3>
+                            <p class="affiliation">UEG/Poslli</p>
+                            <p class="talk-title" style="min-height: 3em;">Coordenadora do GT03</p>
+                            <button class="btn btn-outline bio-btn" data-speaker="nismaria">Ver Bio</button>
+                        </div>
+                    </article>
+                    <article class="speaker-card card animate-on-scroll" style="transition-delay: 100ms;">
+                        <img src="//animaisueg.free.nf/alexandre.png" alt="Foto do Prof. Dr. Alexandre Mariotto Botton"
+                            loading="lazy">
+                        <div class="speaker-info">
+                            <h3>Prof. Dr. Alexandre M. Botton</h3>
+                            <p class="affiliation">Unemat</p>
+                            <p class="talk-title" style="min-height: 3em;">Coordenador do GT04</p>
+                            <button class="btn btn-outline bio-btn" data-speaker="alexandre-botton">Ver Bio</button>
+                        </div>
+                    </article>
+                    <article class="speaker-card card animate-on-scroll" style="transition-delay: 200ms;">
+                        <img src="//animaisueg.free.nf/celiomar.png" alt="Foto do Prof. Dr. Celiomar Profírio Ramos"
+                            loading="lazy">
+                        <div class="speaker-info">
+                            <h3>Prof. Dr. Celiomar P. Ramos</h3>
+                            <p class="affiliation">UEA</p>
+                            <p class="talk-title" style="min-height: 3em;">Coordenador do GT05</p>
+                            <button class="btn btn-outline bio-btn" data-speaker="celiomar-ramos">Ver Bio</button>
+                        </div>
+                    </article>
+                    <article class="speaker-card card animate-on-scroll" style="transition-delay: 300ms;">
+                        <img src="//animaisueg.free.nf/marinei.png" alt="Foto da Profa. Dra. Marinei Almeida"
+                            loading="lazy">
+                        <div class="speaker-info">
+                            <h3>Profª. Dra. Marinei Almeida</h3>
+                            <p class="affiliation">Unemat</p>
+                            <p class="talk-title" style="min-height: 3em;">Coordenadora do GT05</p>
+                            <button class="btn btn-outline bio-btn" data-speaker="marinei-almeida">Ver Bio</button>
+                        </div>
+                    </article>
+                    <article class="speaker-card card animate-on-scroll">
+                        <img src="//animaisueg.free.nf/anacolantoni.png" alt="Foto da Profa. Dra. Ana Colantoni"
+                            loading="lazy">
+                        <div class="speaker-info">
+                            <h3>Profª. Dra. Ana Colantoni</h3>
+                            <p class="affiliation">UFG</p>
+                            <p class="talk-title" style="min-height: 3em;">Coordenadora do GT06</p>
+                            <button class="btn btn-outline bio-btn" data-speaker="ana-colantoni">Ver Bio</button>
+                        </div>
+                    </article>
+                    <article class="speaker-card card animate-on-scroll" style="transition-delay: 100ms;">
+                        <img src="//animaisueg.free.nf/lauriana.png" alt="Foto de Lauriana Fogaça Ferreira dos Santos"
+                            loading="lazy">
+                        <div class="speaker-info">
+                            <h3>M.Lauriana F. F. dos Santos</h3>
+                            <p class="affiliation">Mestranda UEG-Poslli</p>
+                            <p class="talk-title" style="min-height: 3em;">Coordenadora do GT03</p>
+                            <button class="btn btn-outline bio-btn" data-speaker="lauriana-fogaca">Ver Bio</button>
+                        </div>
+                    </article>
+
+                </div>
+
+                <h3 class="section-title animate-on-scroll"
+                    style="font-size: 1.8rem; margin-top: 4rem; margin-bottom: 2rem;">Descrições dos Grupos de Trabalho
+                </h3>
+
                 <div class="card gt-card animate-on-scroll">
                     <h3>GT01: Relações Raciais e Direitos Humanos</h3>
                     <p><strong>Coordenadora:</strong> Profa. Ms. Nágila Alves (Doutoranda – UFPI)</p>
@@ -1079,8 +1196,7 @@
                 <h2 class="section-title animate-on-scroll">Palestrantes e Moderadores</h2>
                 <div class="speakers-grid">
                     <article class="speaker-card card animate-on-scroll">
-                        <img src="//animaisueg.free.nf/Rita.png" alt="Foto da Profa. Dra. Rita Chaves"
-                            loading="lazy">
+                        <img src="//animaisueg.free.nf/Rita.png" alt="Foto da Profa. Dra. Rita Chaves" loading="lazy">
                         <div class="speaker-info">
                             <h3>Profª. Dra. Rita Chaves</h3>
                             <p class="affiliation">USP</p>
@@ -1109,8 +1225,7 @@
                         </div>
                     </article>
                     <article class="speaker-card card animate-on-scroll" style="transition-delay: 300ms;">
-                        <img src="//animaisueg.free.nf/Sonia.jpg" alt="Foto da Profa. Dra. Sônia Santos"
-                            loading="lazy">
+                        <img src="//animaisueg.free.nf/Sonia.jpg" alt="Foto da Profa. Dra. Sônia Santos" loading="lazy">
                         <div class="speaker-info">
                             <h3>Profª. Dra. Sônia Santos</h3>
                             <p class="affiliation">FeMASS</p>
@@ -1119,8 +1234,8 @@
                         </div>
                     </article>
                     <article class="speaker-card card animate-on-scroll" style="transition-delay: 300ms;">
-                        <img src="//animaisueg.free.nf/juniorcesar.png"
-                            alt="Foto do Prof Junior César F. de Castro" loading="lazy">
+                        <img src="//animaisueg.free.nf/juniorcesar.png" alt="Foto do Prof Junior César F. de Castro"
+                            loading="lazy">
                         <div class="speaker-info">
                             <h3>Prof. Dr. Junior César F. de Castro </h3>
                             <p class="affiliation">UFMT</p>
@@ -1129,8 +1244,8 @@
                         </div>
                     </article>
                     <article class="speaker-card card animate-on-scroll" style="transition-delay: 300ms;">
-                        <img src="//animaisueg.free.nf/josehumberto.png"
-                            alt="Foto do Prof Junior César F. de Castro" loading="lazy">
+                        <img src="//animaisueg.free.nf/josehumberto.png" alt="Foto do Prof Junior César F. de Castro"
+                            loading="lazy">
                         <div class="speaker-info">
                             <h3>Prof. Dr.José Humberto dos Anjos </h3>
                             <p class="affiliation">UFG</p>
@@ -1139,8 +1254,8 @@
                         </div>
                     </article>
                     <article class="speaker-card card animate-on-scroll" style="transition-delay: 300ms;">
-                        <img src="//animaisueg.free.nf/normalima.jpg"
-                            alt="Foto da Profª. Drª Norma Sueli Rosa Lima" loading="lazy">
+                        <img src="//animaisueg.free.nf/vivianefarias.jpg" alt="Foto da Profª. Drª Norma Sueli Rosa Lima"
+                            loading="lazy">
                         <div class="speaker-info">
                             <h3>Profª. Drª Norma Sueli Rosa Lima </h3>
                             <p class="affiliation">UERJ-PROFLETRAS</p>
@@ -1169,8 +1284,8 @@
                         </div>
                     </article>
                     <article class="speaker-card card animate-on-scroll" style="transition-delay: 300ms;">
-                        <img src="//animaisueg.free.nf/samuelcarlos.jpg"
-                            alt="Foto do Prof. Dr. Samuel Carlos Melo" loading="lazy">
+                        <img src="//animaisueg.free.nf/samuelcarlos.jpg" alt="Foto do Prof. Dr. Samuel Carlos Melo"
+                            loading="lazy">
                         <div class="speaker-info">
                             <h3>Prof. Dr. Samuel Carlos Melo </h3>
                             <p class="affiliation">Poslli-UEG</p>
@@ -1179,8 +1294,8 @@
                         </div>
                     </article>
                     <article class="speaker-card card animate-on-scroll" style="transition-delay: 300ms;">
-                        <img src="//animaisueg.free.nf/vivianefarias.jpg"
-                            alt="Foto da Prof. Dra. Viviane Farias Lopes" loading="lazy">
+                        <img src="//animaisueg.free.nf/normalima.jpg" alt="Foto da Prof. Dra. Viviane Farias Lopes"
+                            loading="lazy">
                         <div class="speaker-info">
                             <h3>Profª. Dra. Viviane Farias Lopes </h3>
                             <p class="affiliation">Poslli-Linterfaces</p>
@@ -1189,8 +1304,8 @@
                         </div>
                     </article>
                     <article class="speaker-card card animate-on-scroll" style="transition-delay: 300ms;">
-                        <img src="//animaisueg.free.nf/Karyelly.png"
-                            alt="Foto da Profa. Ms. Karyelly Guimarães Moreira" loading="lazy">
+                        <img src="//animaisueg.free.nf/Karyelly.png" alt="Foto da Profa. Ms. Karyelly Guimarães Moreira"
+                            loading="lazy">
                         <div class="speaker-info">
                             <h3>Profª. Ms. Karyelly Guimarães Moreira </h3>
                             <p class="affiliation">IELT-UEG</p>
@@ -1293,10 +1408,17 @@
             <div class="footer-section">
                 <h4>Apoio e Parcerias</h4>
                 <div class="support-logos">
-                    <img src="//animaisueg.free.nf/Neabi.png"
-                        alt="NEABI - Núcleo de estudos Afro-brasileiros e Indígenas">
-                    <img src="//animaisueg.free.nf/afrolic.png" alt="Afrolic">
-                    <img src="//animaisueg.free.nf/Seliafro.png" alt="SELIAFRO">
+                    <a href="https://goias.gov.br/fapeg/"><img src="//animaisueg.free.nf/fapeg.png" alt="FAPEG"></a>
+                    <a href="https://ifgoiano.edu.br/home/index.php/neabi-rv.html"><img
+                            src="//animaisueg.free.nf/Neabi.png"
+                            alt="NEABI - Núcleo de estudos Afro-brasileiros e Indígenas"></a>
+                    <a href="https://afrolic.com.br/"><img src="//animaisueg.free.nf/afrolic.png" alt="Afrolic"></a>
+                    <a href="https://www.instagram.com/se_li_afro/"><img src="//animaisueg.free.nf/Seliafro.png"
+                            alt="SELIAFRO"></a>
+                    <a href="https://unemat.br/"><img src="//animaisueg.free.nf/unemat.png" alt="UNEMAT"></a>
+                    <a href="https://goias.gov.br/"><img src="//animaisueg.free.nf/Goias.png" alt="Estado de Goiás"></a>
+                        <a href="ueg.br"><img src="//animaisueg.free.nf/logoueg.png" alt="Universidade Estadual de Goiás"></a></a>
+
                 </div>
                 <p>LINTERFACES – Literatura em Interfaces: Transdisciplinaridade e Interculturalidade</p>
                 <p>NEABI – Núcleo de Estudos Afro-Brasileiros e Indígenas – UFG – Câmpus Goiás</p>
@@ -1438,12 +1560,12 @@
 
             // --- Modal Handling ---
             const modals = document.querySelectorAll('.modal');
-            
+
             const openModal = (modal) => {
                 modal.style.display = 'block';
                 setTimeout(() => modal.classList.add('active'), 10);
             };
-            
+
             const closeModal = (modal) => {
                 modal.classList.add('closing');
                 modal.classList.remove('active');
@@ -1455,7 +1577,7 @@
 
             modals.forEach(modal => {
                 const closeBtn = modal.querySelector('.close-btn');
-                if(closeBtn) {
+                if (closeBtn) {
                     closeBtn.addEventListener('click', () => closeModal(modal));
                 }
             });
@@ -1466,21 +1588,32 @@
             const bioContent = document.getElementById('bio-content');
 
             const bios = {
+                // Palestrantes e Moderadores
                 'rita-chaves': { name: 'Profª. Dra. Rita Chaves', bio: 'Professora titular de Literaturas Africanas de Língua Portuguesa na Universidade de São Paulo (USP). É uma das maiores especialistas do Brasil na área, com vasta publicação de livros e artigos sobre autores como Mia Couto e Paulina Chiziane.' },
                 'edvaldo-bergamo': { name: 'Prof. Dr. Edvaldo Bergamo', bio: 'Professor da Universidade de Brasília (UnB), com pesquisas voltadas para a teoria literária, literatura comparada e estudos pós-coloniais. Seus trabalhos abordam a representação do colonialismo e suas heranças na literatura.' },
                 'maria-nazareth': { name: 'Profª. Dra. Maria Nazareth Soares Fonseca', bio: 'Professora emérita da Universidade Federal de Minas Gerais (UFMG), pesquisadora do CNPq e referência nos estudos da literatura afro-brasileira. Sua obra é fundamental para a compreensão das poéticas e políticas de autoria negra no Brasil.' },
                 'sonia-santos': { name: 'Profª. Dra. Sônia Santos', bio: 'Docente e pesquisadora com foco em estudos de gênero, cultura e literatura. Analisa a produção literária de mulheres em contextos africanos e da diáspora, investigando temas como identidade, memória e resistência.' },
-                'junior-cesar': { name: 'Prof. Dr. Junior César F. de Castro', bio: 'Doutor em Estudos de Linguagem pela Universidade Federal de Mato Grosso (UFMT), com estágio doutoral na Universidade de Lisboa. Mestre em Estudos de Linguagem e graduado em Letras/Espanhol pela mesma instituição. Atualmente, é professor adjunto na UFMT, no Instituto de Linguagens/Departamento de Letras, e professor permanente no Programa de Pós-Graduação em Estudos de Linguagem (PPGEL). É líder do Grupo de Pesquisa "Estudos Críticos da Linguagem, Sociedade e Fronteira" (GPLISF) e pesquisador no Grupo de Pesquisa "Linguagem, Sociedade e Trabalho" (GEPLIST). Seus interesses de pesquisa incluem Análise de Discurso Crítica, Ensino de Línguas Adicionais/Estrangeiras e Sociolinguística Crítica.' },
+                'junior-cesar': { name: 'Prof. Dr. Junior César F. de Castro', bio: 'Doutor em Estudos de Linguagem pela Universidade Federal de Mato Grosso (UFMT), com estágio doutoral na Universidade de Lisboa. Atualmente, é professor adjunto na UFMT e professor permanente no Programa de Pós-Graduação em Estudos de Linguagem (PPGEL). Seus interesses de pesquisa incluem Análise de Discurso Crítica, Ensino de Línguas Adicionais/Estrangeiras e Sociolinguística Crítica.' },
                 'norma-sueli': { name: 'Profª. Drª Norma Sueli Rosa Lima', bio: 'Professora Adjunta do Departamento de Letras da Universidade do Estado do Rio de Janeiro (UERJ-FFP). Possui doutorado em Estudos de Literatura pela Universidade Federal Fluminense (UFF) e mestrado em Letras pela UERJ. Suas áreas de interesse são Literaturas Africanas de Língua Portuguesa e Literatura Afro-Brasileira, com foco em ensino e diversidade étnica.' },
-                'jose-humberto': { name: 'Prof. Dr.José Humberto dos Anjos', bio: 'Professor efetivo da Universidade Federal de Goiás (UFG) no curso de Pedagogia. Doutor em Educação pela Universidade de Uberaba (UNIUBE), Mestre em Estudos da Linguagem pela UFG e especialista em Gestão de Sala de Aula no Ensino Superior. É membro do Núcleo de Estudos Afro-brasileiros e Indígenas (NEABI) e da Academia Mineirense de Letras e Artes. Sua pesquisa é focada no ensino de literatura, formação de professores e diversidade étnico-racial.' },
-                'dirlenvalder': { name: 'Prof. Dr. Dirlenvalder Loyolla', bio: 'Doutorado em Letras com foco em Literatura e Práticas Sociais pela Universidade de Brasília (UnB), mestrado em Estudos Literários pela Universidade Federal de Minas Gerais (UFMG) e bacharelado em Estudos Literários pela Universidade Federal de Ouro Preto (UFOP). Realizou um estágio de pós-doutorado na UFRGS, onde analisou a obra de Carolina Maria de Jesus. É professor na Universidade Federal do Sul e Sudeste do Pará (UNIFESSPA) e tem 18 anos de experiência no Ensino Superior.' },
-                'lilianpaula': { name: 'Profª. Dra. Lilian Paula Serra e Deus', bio: 'Professora, Mestre e Doutora em Letras pela PUC Minas. Sua dissertação de mestrado abordou a hibridação e identidade nas Literaturas Africanas de Língua Portuguesa, e a tese de doutorado analisou memórias e identidades em obras de João Paulo Borges Coelho, Mia Couto e Chico Buarque. É uma escritora e poeta afro-brasileira, com contos publicados nos Cadernos Negros, e vê a escrita como um ato político de existência e resistência.' },
+                'jose-humberto': { name: 'Prof. Dr.José Humberto dos Anjos', bio: 'Professor efetivo da Universidade Federal de Goiás (UFG) no curso de Pedagogia. Doutor em Educação pela Universidade de Uberaba (UNIUBE) e Mestre em Estudos da Linguagem pela UFG. É membro do Núcleo de Estudos Afro-brasileiros e Indígenas (NEABI). Sua pesquisa é focada no ensino de literatura, formação de professores e diversidade étnico-racial.' },
+                'dirlenvalder': { name: 'Prof. Dr. Dirlenvalder Loyolla', bio: 'Doutorado em Letras com foco em Literatura e Práticas Sociais pela Universidade de Brasília (UnB) e professor na Universidade Federal do Sul e Sudeste do Pará (UNIFESSPA). Realizou um estágio de pós-doutorado na UFRGS, onde analisou a obra de Carolina Maria de Jesus.' },
+                'lilianpaula': { name: 'Profª. Dra. Lilian Paula Serra e Deus', bio: 'Professora, Mestre e Doutora em Letras pela PUC Minas. É uma escritora e poeta afro-brasileira, com contos publicados nos Cadernos Negros, e vê a escrita como um ato político de existência e resistência.' },
                 'samuelcarlos': { name: 'Prof. Dr. Samuel Carlos Melo', bio: 'Doutor em Literatura Brasileira pela Universidade de São Paulo (USP). Atua como professor no curso de Letras da Universidade Estadual de Goiás (UEG) em Iporá e no Programa de Mestrado em Língua, Literatura e Interculturalidade (POSLLI). Além da carreira acadêmica, é músico e compositor.' },
-                'vivianefarias': { name: 'Profª. Dra. Viviane Farias Lopes', bio: 'Professora na Universidade Estadual de Goiás (UEG), atuando na graduação e pós-graduação. Coordena o Grupo de Pesquisa "A interferência da Linguagem na Saúde Mental" e o Projeto de Extensão "Linguagem e Saúde Mental". Possui Pós-Doutorado pela USP, Mestrado e Doutorado em Linguística pela UnB, e especialização em Neuroaprendizagem. Tem experiência como professora na UnB, UFCat e UFG. Ministra cursos e palestras sobre Linguagem, Cognição e Saúde Mental, com foco em Análise do Discurso e Psicolinguística.' },
-                'karyelly': { name: 'Profª. Ms. Karyelly Guimarães Moreira', bio: 'Mestra e doutoranda pela Universidade Estadual de Goiás. Descreve-se como "Mulher, negra, cristã e pessoa em constantes (des/re)construções". Iniciou sua paixão pela docência em um projeto onde lecionou por dois anos e, posteriormente, atuou por mais de três anos no Ensino Médio.' },
-                'carlosmatheus': { name: 'Prof. Ms. Carlos Matheus da Silva Mello', bio: 'Mestrando em Linguagens e Práticas Sociais pelo PPG-IELT (UEG/CSEH), com graduação em Letras Português/Inglês pela mesma instituição. É bolsista da CAPES e membro do grupo de pesquisa "Integra - Perspectivas Críticas em Educação Linguística e Letramentos". Suas pesquisas são na área de educação linguística, com ênfase em educação linguística crítica, decolonialidade, letramento visual crítico e letramentos antirracistas.' },
+                'vivianefarias': { name: 'Profª. Dra. Viviane Farias Lopes', bio: 'Professora na Universidade Estadual de Goiás (UEG), atuando na graduação e pós-graduação. Coordena o Grupo de Pesquisa "A interferência da Linguagem na Saúde Mental". Possui Pós-Doutorado pela USP e Doutorado em Linguística pela UnB.' },
+                'karyelly': { name: 'Profª. Ms. Karyelly Guimarães Moreira', bio: 'Mestra e doutoranda pela Universidade Estadual de Goiás. Iniciou sua paixão pela docência em um projeto onde lecionou por dois anos e, posteriormente, atuou por mais de três anos no Ensino Médio.' },
+                'carlosmatheus': { name: 'Prof. Ms. Carlos Matheus da Silva Mello', bio: 'Mestrando em Linguagens e Práticas Sociais pelo PPG-IELT (UEG/CSEH), com graduação em Letras Português/Inglês pela mesma instituição. É bolsista da CAPES e membro do grupo de pesquisa "Integra - Perspectivas Críticas em Educação Linguística e Letramentos".' },
+
+                // Coordenadores de GT
+                'nagila-alves': { name: 'Profª. Ms. Nágila Alves', bio: 'Mestra e Doutoranda em Letras pela Universidade Federal do Piauí (UFPI). Sua pesquisa foca nas relações entre literatura, direitos humanos e questões raciais, analisando como as narrativas literárias podem ser um espaço de denúncia e resistência.' },
+                'nismaria': { name: 'Profa. Dra. Nismária Alves David', bio: 'Professora da Universidade Estadual de Goiás (UEG) e do Programa de Pós-Graduação em Língua, Literatura e Interculturalidade (Poslli). Possui doutorado em Estudos Linguísticos e Literários em Inglês pela USP. Suas pesquisas abordam literaturas de língua inglesa, com foco em autoras caribenhas e estudos de gênero.' },
+                'jane-gandra': { name: 'Profa. Dra. Jane Gandra', bio: 'Docente da Universidade Estadual de Goiás (UEG) e do Programa de Pós-Graduação em Língua, Literatura e Interculturalidade (Poslli). Doutora em Letras e Linguística pela UFG, desenvolve pesquisas sobre literatura e ensino, com ênfase na formação de leitores e na análise de obras do cânone e contemporâneas.' },
+                'alexandre-botton': { name: 'Prof. Dr. Alexandre Mariotto Botton', bio: 'Doutor em Sociologia e professor na Universidade do Estado de Mato Grosso (Unemat). É um pesquisador dedicado ao estudo de políticas afirmativas, desigualdades sociais e movimentos sociais no Brasil, com publicações sobre o impacto das cotas no ensino superior.' },
+                'celiomar-ramos': { name: 'Prof. Dr. Celiomar Profírio Ramos', bio: 'Docente na Universidade do Estado do Amazonas (UEA), com doutorado em Estudos Literários. Seus trabalhos investigam as representações da violência e do silenciamento em narrativas de autoria feminina, com uma abordagem interseccional que conecta gênero, raça e classe.' },
+                'marinei-almeida': { name: 'Profª. Dra. Marinei Almeida', bio: 'Professora e pesquisadora na Universidade do Estado de Mato Grosso (Unemat). Seus estudos são focados na crítica literária feminista e na análise de obras de escritoras contemporâneas que abordam temas como trauma, memória e violência de gênero.' },
+                'ana-colantoni': { name: 'Profª. Dra. Ana Colantoni', bio: 'Professora da Universidade Federal de Goiás (UFG) e especialista em Estudos de Branquitude Crítica. Sua pesquisa analisa como a branquitude é representada e questionada na literatura, explorando os privilégios e as responsabilidades na luta antirracista.' },
+                'lauriana-fogaca': { name: 'Lauriana Fogaça Ferreira dos Santos', bio: 'Mestranda no Programa de Pós-Graduação em Língua, Literatura e Interculturalidade (Poslli) da UEG. Sua pesquisa é voltada para a literatura infantojuvenil e sua importância na discussão sobre relações étnico-raciais e na formação de uma educação antirracista.' }
             };
-            
+
             bioBtns.forEach(btn => {
                 btn.addEventListener('click', (e) => {
                     const speakerKey = e.currentTarget.dataset.speaker;
@@ -1495,7 +1628,7 @@
             // --- Modal de Inscrições ---
             const submissionModal = document.getElementById('submission-modal');
             const submissionBtns = document.querySelectorAll('.submission-btn');
-            
+
             submissionBtns.forEach(btn => {
                 btn.addEventListener('click', () => {
                     openModal(submissionModal);
@@ -1508,11 +1641,11 @@
                     closeModal(event.target);
                 }
             });
-            
+
             window.addEventListener('keydown', (event) => {
                 if (event.key === 'Escape') {
                     modals.forEach(modal => {
-                        if(modal.style.display === 'block') closeModal(modal);
+                        if (modal.style.display === 'block') closeModal(modal);
                     });
                 }
             });
